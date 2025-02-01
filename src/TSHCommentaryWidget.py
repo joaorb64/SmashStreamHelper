@@ -14,7 +14,7 @@ from .StateManager import StateManager
 class TSHCommentaryWidget(QDockWidget):
     def __init__(self, *args):
         super().__init__(*args)
-        self.setWindowTitle(QApplication.translate("app", "Commentary"))
+        self.setWindowTitle(QApplication.translate("app", "TSH_legacy_00161"))
         self.setFloating(True)
         self.setAllowedAreas(Qt.DockWidgetArea.AllDockWidgetAreas)
         self.widget = QWidget()
@@ -36,7 +36,7 @@ class TSHCommentaryWidget(QDockWidget):
         self.commentatorNumber = QSpinBox()
         row = QWidget()
         row.setLayout(QHBoxLayout())
-        commsNumber = QLabel(QApplication.translate("app", "Number of commentators"))
+        commsNumber = QLabel(QApplication.translate("app", "TSH_legacy_00232"))
         commsNumber.setSizePolicy(QSizePolicy.Policy.Fixed, QSizePolicy.Policy.Minimum)
         row.layout().addWidget(commsNumber)
         row.layout().addWidget(self.commentatorNumber)
@@ -44,7 +44,7 @@ class TSHCommentaryWidget(QDockWidget):
             lambda val: self.SetCommentatorNumber(val))
         
         characterNumber = QSpinBox()
-        charNumber = QLabel(QApplication.translate("app", "Characters per player"))
+        charNumber = QLabel(QApplication.translate("app", "TSH_legacy_00141"))
         charNumber.setSizePolicy(QSizePolicy.Policy.Fixed, QSizePolicy.Policy.Minimum)
         row.layout().addWidget(charNumber)
         row.layout().addWidget(characterNumber)
@@ -68,11 +68,11 @@ class TSHCommentaryWidget(QDockWidget):
             ["Characters", ["characters"]],
             ["Pronouns", ["pronoun", "pronounLabel"]],
         ]
-        self.elements[0][0] = QApplication.translate("app", "Real Name")
-        self.elements[1][0] = QApplication.translate("app", "Twitter")
-        self.elements[2][0] = QApplication.translate("app", "Location")
-        self.elements[3][0] = QApplication.translate("app", "Characters")
-        self.elements[4][0] = QApplication.translate("app", "Pronouns")
+        self.elements[0][0] = QApplication.translate("app", "TSH_legacy_00217")
+        self.elements[1][0] = QApplication.translate("app", "TSH_legacy_00218")
+        self.elements[2][0] = QApplication.translate("app", "TSH_legacy_00219")
+        self.elements[3][0] = QApplication.translate("app", "TSH_legacy_00220")
+        self.elements[4][0] = QApplication.translate("app", "TSH_legacy_00221")
         for element in self.elements:
             action: QAction = self.eyeBt.menu().addAction(element[0])
             action.setCheckable(True)

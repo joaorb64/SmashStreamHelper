@@ -26,10 +26,10 @@
    </font>
   </property>
   <property name="windowTitle">
-   <string>GroupBox</string>
+   <string>TSH_legacy_00117</string>
   </property>
   <property name="title">
-   <string>Commentator 1</string>
+   <string>TSH_legacy_00118</string>
   </property>
   <layout class="QFormLayout" name="formLayout">
    <item row="1" column="0">
@@ -44,7 +44,7 @@
       </font>
      </property>
      <property name="text">
-      <string>SPONSOR/TAG</string>
+      <string>TSH_legacy_00119</string>
      </property>
     </widget>
    </item>
@@ -71,7 +71,7 @@
         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
        </property>
        <property name="placeholderText">
-        <string>Sponsor</string>
+        <string>TSH_legacy_00120</string>
        </property>
       </widget>
      </item>
@@ -87,7 +87,7 @@
         </font>
        </property>
        <property name="placeholderText">
-        <string>GamerTag</string>
+        <string>TSH_legacy_00121</string>
        </property>
       </widget>
      </item>
@@ -105,7 +105,7 @@
       </font>
      </property>
      <property name="text">
-      <string>REAL NAME</string>
+      <string>TSH_legacy_00122</string>
      </property>
     </widget>
    </item>
@@ -121,7 +121,7 @@
       </font>
      </property>
      <property name="placeholderText">
-      <string>Real Name</string>
+      <string>TSH_legacy_00123</string>
      </property>
     </widget>
    </item>
@@ -137,7 +137,7 @@
       </font>
      </property>
      <property name="text">
-      <string>TWITTER</string>
+      <string>TSH_legacy_00124</string>
      </property>
     </widget>
    </item>
@@ -153,7 +153,7 @@
       </font>
      </property>
      <property name="placeholderText">
-      <string>Handle Only</string>
+      <string>TSH_legacy_00125</string>
      </property>
     </widget>
    </item>
@@ -169,7 +169,7 @@
       </font>
      </property>
      <property name="text">
-      <string>PRONOUNS</string>
+      <string>TSH_legacy_00126</string>
      </property>
     </widget>
    </item>

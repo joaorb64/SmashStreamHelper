@@ -100,10 +100,10 @@ class TSHTournamentInfoWidget(QDockWidget):
         try:
             fileName = QFileDialog.getOpenFileName(
                 self,
-                QApplication.translate("app", "Open Image"),
+                QApplication.translate("app", "TSH_legacy_00261"),
                 ".",
                 QApplication.translate(
-                    "app", "Image Files")+" (*.png *.jpg *.bmp)"
+                    "app", "TSH_legacy_00262")+" (*.png *.jpg *.bmp)"
             )[0]
 
             if fileName != None:
@@ -141,8 +141,8 @@ class TSHTournamentInfoWidget(QDockWidget):
     def DisplayErrorMessage(self, message):
         msgBox = QMessageBox()
         msgBox.setWindowIcon(QIcon('assets/icons/icon.png'))
-        msgBox.setWindowTitle(QApplication.translate("app", "Error"))
-        msgBox.setText(QApplication.translate("app", "Error"))
+        msgBox.setWindowTitle(QApplication.translate("app", "TSH_legacy_00263"))
+        msgBox.setText(QApplication.translate("app", "TSH_legacy_00263"))
         msgBox.setInformativeText(message)
         msgBox.setIcon(QMessageBox.Critical)
         msgBox.exec()
@@ -196,7 +196,7 @@ class TSHTournamentInfoWidget(QDockWidget):
             except:
                 logger.error(traceback.format_exc())
                 SettingsManager.Set("TOURNAMENT_URL", '')
-                error_message = QApplication.translate("app", "The tournament URL could not be loaded.") + "\n" + QApplication.translate(
-                    "app", "Make sure that your tournament URL is correctly formatted and points to an existing event, and try again.")
+                error_message = QApplication.translate("app", "TSH_legacy_00264") + "\n" + QApplication.translate(
+                    "app", "TSH_legacy_00265")
                 self.DisplayErrorMessage(error_message)
                 break

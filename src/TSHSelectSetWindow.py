@@ -12,7 +12,7 @@ class TSHSelectSetWindow(QDialog):
         super().__init__(parent)
 
         self.setWindowTitle(
-            QApplication.translate("app", "Select a set"))
+            QApplication.translate("app", "TSH_legacy_00253"))
         self.setWindowModality(Qt.WindowModal)
 
         layout = QVBoxLayout()
@@ -34,11 +34,11 @@ class TSHSelectSetWindow(QDialog):
         options = QHBoxLayout()
 
         self.showFinished = QCheckBox(
-            QApplication.translate("app", "Show completed sets"))
+            QApplication.translate("app", "TSH_legacy_00254"))
         options.addWidget(self.showFinished)
         self.showFinished.clicked.connect(lambda check: self.LoadSets())
         self.showCompletePairs = QCheckBox(
-            QApplication.translate("app", "Show complete pairs"))
+            QApplication.translate("app", "TSH_legacy_00255"))
         options.addWidget(self.showCompletePairs)
         self.showCompletePairs.clicked.connect(lambda check: self.LoadSets())
 
@@ -93,7 +93,7 @@ class TSHSelectSetWindow(QDialog):
             showFinished=self.showFinished.isChecked())
         self.model.clear()
         self.labelStatus.setText(
-            QApplication.translate("app", "Fetching sets..."))
+            QApplication.translate("app", "TSH_legacy_00256"))
 
     def SetsUpdated(self, data):
         if data == None:
@@ -107,14 +107,14 @@ class TSHSelectSetWindow(QDialog):
 
         horizontal_labels = ["Stream", "Station",
                              "Wave", "Title", "Player 1", "Player 2"]
-        horizontal_labels[0] = QApplication.translate("app", "Stream")
-        horizontal_labels[1] = QApplication.translate("app", "Station")
-        horizontal_labels[2] = QApplication.translate("app", "Phase")
-        horizontal_labels[3] = QApplication.translate("app", "Match")
+        horizontal_labels[0] = QApplication.translate("app", "TSH_legacy_00257")
+        horizontal_labels[1] = QApplication.translate("app", "TSH_legacy_00258")
+        horizontal_labels[2] = QApplication.translate("app", "TSH_legacy_00259")
+        horizontal_labels[3] = QApplication.translate("app", "TSH_legacy_00260")
         horizontal_labels[4] = QApplication.translate(
-            "app", "Player {0}").format(1)
+            "app", "TSH_legacy_00213_{0}").format(1)
         horizontal_labels[5] = QApplication.translate(
-            "app", "Player {0}").format(2)
+            "app", "TSH_legacy_00213_{0}").format(2)
         self.model.setHorizontalHeaderLabels(horizontal_labels)
 
         sets = data["sets"]

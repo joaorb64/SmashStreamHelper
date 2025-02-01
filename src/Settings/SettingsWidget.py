@@ -26,7 +26,7 @@ class SettingsWidget(QWidget):
         self.layout().addWidget(QLabel(name), lastRow, 0)
 
         resetButton = QPushButton(
-            QApplication.translate("settings", "Default"))
+            QApplication.translate("settings", "TSH_legacy_00290"))
 
         if type == "checkbox":
             settingWidget = QCheckBox()
@@ -76,7 +76,10 @@ class SettingsWidget(QWidget):
             )
         
         if tooltip:
-            settingWidget.setToolTip('\n'.join(textwrap.wrap(tooltip, 40)))
+            tooltip_lines = tooltip.split("\n")
+            for i in range(len(tooltip_lines)):
+                tooltip_lines[i] = '\n'.join(textwrap.wrap(tooltip_lines[i], 40))
+            settingWidget.setToolTip('\n'.join(tooltip_lines))
 
         self.layout().addWidget(settingWidget, lastRow, 1)
         self.layout().addWidget(resetButton, lastRow, 2)

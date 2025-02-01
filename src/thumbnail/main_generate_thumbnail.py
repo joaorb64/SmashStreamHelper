@@ -485,7 +485,7 @@ def paste_image_matrix(thumbnail, path_matrix, max_size, paste_coordinates, eyes
                 global font_1
                 draw_text(
                     debugPix,
-                    QApplication.translate("Form", "Scale: {0}").format(
+                    QApplication.translate("Form", "TSH_legacy_00115_{0}").format(
                         "{0:.2f}".format(zoom)) + '%'+"\n",
                     font_1, 24, (0, 0, 0),
                     (round(paste_coordinates[0] + col_index *
@@ -498,7 +498,7 @@ def paste_image_matrix(thumbnail, path_matrix, max_size, paste_coordinates, eyes
 
                 draw_text(
                     debugPix,
-                    QApplication.translate("Form", "Eyesight offset: ({0}, {1})").format(
+                    QApplication.translate("Form", "TSH_legacy_00116_{0}_{1}").format(
                         int(original_xx - xx), int(original_yy - yy)),
                     font_1, 24, (0, 0, 0),
                     (round(paste_coordinates[0] + col_index *
@@ -1180,8 +1180,8 @@ def createFalseData(gameAssetManager: TSHGameAssetManager = None, used_assets: s
     else:
         for i in range(4):
             chars.append({
-                "name": QApplication.translate("app", "Player {0}").format(i+1),
-                "team": QApplication.translate("app", "Sponsor {0}").format(i+1),
+                "name": QApplication.translate("app", "TSH_legacy_00213_{0}").format(i+1),
+                "team": QApplication.translate("app", "TSH_legacy_00266_{0}").format(i+1),
                 "asset": {
                     "assets": {
                         "full": {
@@ -1228,7 +1228,7 @@ def createFalseData(gameAssetManager: TSHGameAssetManager = None, used_assets: s
                             }
                         },
                         "score": 0,
-                        "teamName": QApplication.translate("app", "Team {0}").format("A")
+                        "teamName": QApplication.translate("app", "TSH_legacy_00267_{0}").format("A")
                     },
                     "2": {
                         "losers": False,
@@ -1255,7 +1255,7 @@ def createFalseData(gameAssetManager: TSHGameAssetManager = None, used_assets: s
                             }
                         },
                         "score": 0,
-                        "teamName": QApplication.translate("app", "Team {0}").format("B")
+                        "teamName": QApplication.translate("app", "TSH_legacy_00267_{0}").format("B")
                     }
                 }
             }
@@ -1365,12 +1365,12 @@ def generate(settingsManager, isPreview=False, gameAssetManager=None, scoreboard
         # if data missing
         if not data.get("game").get("codename"):
             raise Exception(QApplication.translate(
-                "thumb_app", "Please select a game first"))
+                "thumb_app", "TSH_legacy_00321"))
         # - if more than one player (team of 2,3 etc), not necessary because test is made on paste_player_text
         for i in [1, 2]:
             if 'name' not in data.get("score").get(str(scoreboardNumber)).get("team").get(str(i)).get("player").get("1"):
                 raise Exception(QApplication.translate(
-                    "thumb_app", "Player {0} tag missing").format(i))
+                    "thumb_app", "TSH_legacy_00322_{0}").format(i))
         game_codename = data.get("game").get("codename")
         used_assets = deep_get(settings, f"game.{game_codename}.asset_pack")
         asset_data_path = f"./user_data/games/{game_codename}/{used_assets}/config.json"

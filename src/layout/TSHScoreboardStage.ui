@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string>TSH_legacy_00025</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_2">
    <item>
@@ -42,7 +42,7 @@
        <item>
         <widget class="QLabel" name="label_5">
          <property name="text">
-          <string>Ruleset Name</string>
+          <string>TSH_legacy_00029</string>
          </property>
         </widget>
        </item>
@@ -52,7 +52,7 @@
        <item>
         <widget class="QGroupBox" name="groupBox_3">
          <property name="title">
-          <string>Stagelist</string>
+          <string>TSH_legacy_00030</string>
          </property>
          <layout class="QVBoxLayout" name="verticalLayout_10">
           <item>
@@ -62,7 +62,7 @@
               <item>
                <widget class="QLabel" name="label">
                 <property name="text">
-                 <string>All stages</string>
+                 <string>TSH_legacy_00031</string>
                 </property>
                </widget>
               </item>
@@ -161,7 +161,7 @@
                   <item>
                    <widget class="QLabel" name="label_2">
                     <property name="text">
-                     <string>Neutral stages</string>
+                     <string>TSH_legacy_00032</string>
                     </property>
                    </widget>
                   </item>
@@ -247,7 +247,7 @@
                   <item>
                    <widget class="QLabel" name="label_3">
                     <property name="text">
-                     <string>Counterpick stages</string>
+                     <string>TSH_legacy_00033</string>
                     </property>
                    </widget>
                   </item>
@@ -268,13 +268,13 @@
        <item>
         <widget class="QGroupBox" name="groupBox">
          <property name="title">
-          <string>DSR</string>
+          <string>TSH_legacy_00034</string>
          </property>
          <layout class="QHBoxLayout" name="horizontalLayout_8">
           <item>
            <widget class="QRadioButton" name="noDSR">
             <property name="text">
-             <string>No DSR</string>
+             <string>TSH_legacy_00035</string>
             </property>
             <property name="checked">
              <bool>true</bool>
@@ -287,7 +287,7 @@
           <item>
            <widget class="QRadioButton" name="DSR">
             <property name="text">
-             <string>DSR</string>
+             <string>TSH_legacy_00034</string>
             </property>
             <attribute name="buttonGroup">
              <string notr="true">dsrGroup</string>
@@ -297,7 +297,7 @@
           <item>
            <widget class="QRadioButton" name="MDSR">
             <property name="text">
-             <string>MDSR</string>
+             <string>TSH_legacy_00036</string>
             </property>
             <attribute name="buttonGroup">
              <string notr="true">dsrGroup</string>
@@ -310,7 +310,7 @@
        <item>
         <widget class="QGroupBox" name="groupBox_2">
          <property name="title">
-          <string>Stage striking</string>
+          <string>TSH_legacy_00037</string>
          </property>
          <layout class="QVBoxLayout" name="verticalLayout_9">
           <item>
@@ -318,7 +318,7 @@
             <item>
              <widget class="QLabel" name="label_7">
               <property name="text">
-               <string>Strike order, numbers separated by comma (game 1)</string>
+               <string>TSH_legacy_00038</string>
               </property>
              </widget>
             </item>
@@ -331,7 +331,7 @@
                </sizepolicy>
               </property>
               <property name="placeholderText">
-               <string>1,2,1</string>
+               <string>TSH_legacy_00039</string>
               </property>
              </widget>
             </item>
@@ -342,7 +342,7 @@
             <item>
              <widget class="QRadioButton" name="fixedBanCount">
               <property name="text">
-               <string>Fixed ban count (how many stages winner bans)</string>
+               <string>TSH_legacy_00040</string>
               </property>
               <attribute name="buttonGroup">
                <string notr="true">buttonGroup_2</string>
@@ -359,7 +359,7 @@
             <item>
              <widget class="QRadioButton" name="variableBanCount">
               <property name="text">
-               <string>Ban count by max games (games:bans,games:bans)</string>
+               <string>TSH_legacy_00041</string>
               </property>
               <attribute name="buttonGroup">
                <string notr="true">buttonGroup_2</string>
@@ -375,7 +375,7 @@
                </sizepolicy>
               </property>
               <property name="placeholderText">
-               <string>3:3,5:2</string>
+               <string>TSH_legacy_00042</string>
               </property>
              </widget>
             </item>
@@ -393,21 +393,21 @@
      <item>
       <widget class="QPushButton" name="btSave">
        <property name="text">
-        <string>Save</string>
+        <string>TSH_legacy_00043</string>
        </property>
       </widget>
      </item>
      <item>
       <widget class="QPushButton" name="btDelete">
        <property name="text">
-        <string>Delete</string>
+        <string>TSH_legacy_00044</string>
        </property>
       </widget>
      </item>
      <item>
       <widget class="QPushButton" name="btClear">
        <property name="text">
-        <string>Clear</string>
+        <string>TSH_legacy_00045</string>
        </property>
       </widget>
      </item>
@@ -416,7 +416,7 @@
    <item>
     <widget class="QLabel" name="labelIp">
      <property name="text">
-      <string>IP</string>
+      <string>TSH_legacy_00046</string>
      </property>
     </widget>
    </item>
@@ -429,7 +429,7 @@
       </font>
      </property>
      <property name="text">
-      <string>Validation</string>
+      <string>TSH_legacy_00047</string>
      </property>
     </widget>
    </item>

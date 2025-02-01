@@ -164,7 +164,7 @@ class TSHScoreboardWidget(QWidget):
         col.setLayout(QVBoxLayout())
         topOptions.layout().addWidget(col)
         self.charNumber = QSpinBox()
-        col.layout().addWidget(QLabel(QApplication.translate("app", "Characters per player")))
+        col.layout().addWidget(QLabel(QApplication.translate("app", "TSH_legacy_00141")))
         col.layout().addWidget(self.charNumber)
         self.charNumber.valueChanged.connect(self.SetCharacterNumber)
 
@@ -173,7 +173,7 @@ class TSHScoreboardWidget(QWidget):
         topOptions.layout().addWidget(col)
         topOptions.layout().addStretch()
         self.playerNumber = QSpinBox()
-        col.layout().addWidget(QLabel(QApplication.translate("app", "Players per team")))
+        col.layout().addWidget(QLabel(QApplication.translate("app", "TSH_legacy_00215")))
         col.layout().addWidget(self.playerNumber)
         self.playerNumber.valueChanged.connect(self.SetPlayersPerTeam)
 
@@ -185,7 +185,7 @@ class TSHScoreboardWidget(QWidget):
         topOptions.layout().addWidget(col)
 
         self.thumbnailBtn = QPushButton(
-            QApplication.translate("app", "Generate Thumbnail") + " ")
+            QApplication.translate("app", "TSH_legacy_00216") + " ")
         self.thumbnailBtn.setIcon(QIcon('assets/icons/png_file.svg'))
         self.thumbnailBtn.setSizePolicy(QSizePolicy.Maximum, QSizePolicy.Fixed)
         col.layout().addWidget(self.thumbnailBtn, Qt.AlignmentFlag.AlignRight)
@@ -193,7 +193,7 @@ class TSHScoreboardWidget(QWidget):
         self.thumbnailBtn.clicked.connect(self.GenerateThumbnail)
         
         self.bskyBtn = QPushButton(
-            QApplication.translate("app", "Post to Bluesky") + " ")
+            QApplication.translate("app", "TSH_legacy_00222") + " ")
         self.bskyBtn.setIcon(QIcon('assets/icons/bsky.svg'))
         self.bskyBtn.setSizePolicy(QSizePolicy.Maximum, QSizePolicy.Fixed)
         col.layout().addWidget(self.bskyBtn, Qt.AlignmentFlag.AlignRight)
@@ -224,11 +224,11 @@ class TSHScoreboardWidget(QWidget):
             ["Characters", ["characters"]],
             ["Pronouns", ["pronoun", "pronounLabel"]],
         ]
-        self.elements[0][0] = QApplication.translate("app", "Real Name")
-        self.elements[1][0] = QApplication.translate("app", "Twitter")
-        self.elements[2][0] = QApplication.translate("app", "Location")
-        self.elements[3][0] = QApplication.translate("app", "Characters")
-        self.elements[4][0] = QApplication.translate("app", "Pronouns")
+        self.elements[0][0] = QApplication.translate("app", "TSH_legacy_00217")
+        self.elements[1][0] = QApplication.translate("app", "TSH_legacy_00218")
+        self.elements[2][0] = QApplication.translate("app", "TSH_legacy_00219")
+        self.elements[3][0] = QApplication.translate("app", "TSH_legacy_00220")
+        self.elements[4][0] = QApplication.translate("app", "TSH_legacy_00221")
         for element in self.elements:
             action: QAction = self.eyeBt.menu().addAction(element[0])
             action.setCheckable(True)
@@ -255,7 +255,7 @@ class TSHScoreboardWidget(QWidget):
         self.innerWidget.layout().addWidget(bottomOptions)
 
         self.streamUrl = QHBoxLayout()
-        self.streamUrlLabel = QLabel(QApplication.translate("app", "Stream URL") + " ")
+        self.streamUrlLabel = QLabel(QApplication.translate("app", "TSH_legacy_00223") + " ")
         self.streamUrl.layout().addWidget(self.streamUrlLabel)
         self.streamUrlTextBox = QLineEdit()
         self.streamUrl.layout().addWidget(self.streamUrlTextBox)
@@ -266,7 +266,7 @@ class TSHScoreboardWidget(QWidget):
         bottomOptions.layout().addLayout(self.streamUrl)
 
         self.btSelectSet = QPushButton(
-            QApplication.translate("app", "Load set"))
+            QApplication.translate("app", "TSH_legacy_00224"))
         self.btSelectSet.setIcon(QIcon("./assets/icons/list.svg"))
         self.btSelectSet.setEnabled(False)
         bottomOptions.layout().addWidget(self.btSelectSet)
@@ -276,7 +276,7 @@ class TSHScoreboardWidget(QWidget):
         bottomOptions.layout().addLayout(hbox)
 
         self.btLoadStationSet = QPushButton(
-            QApplication.translate("app", "Track sets from a stream or station"))
+            QApplication.translate("app", "TSH_legacy_00225"))
         self.btLoadStationSet.setIcon(QIcon("./assets/icons/station.svg"))
         hbox.addWidget(self.btLoadStationSet)
         self.btLoadStationSet.clicked.connect(
@@ -336,7 +336,7 @@ class TSHScoreboardWidget(QWidget):
         self.team1column = uic.loadUi(TSHResolve("src/layout/TSHScoreboardTeam.ui"))
         self.columns.layout().addWidget(self.team1column)
         self.team1column.findChild(QLabel, "teamLabel").setText(
-            QApplication.translate("app", "TEAM {0}").format(1))
+            QApplication.translate("app", "TSH_legacy_00226_{0}").format(1))
 
         DEFAULT_TEAM1_COLOR = 'rgb(254, 54, 54)'
 
@@ -376,7 +376,7 @@ class TSHScoreboardWidget(QWidget):
         self.team2column = uic.loadUi(TSHResolve("src/layout/TSHScoreboardTeam.ui"))
         self.columns.layout().addWidget(self.team2column)
         self.team2column.findChild(QLabel, "teamLabel").setText(
-            QApplication.translate("app", "TEAM {0}").format(2))
+            QApplication.translate("app", "TSH_legacy_00226_{0}").format(2))
 
         DEFAULT_TEAM2_COLOR = 'rgb(46, 137, 255)'
 
@@ -527,13 +527,13 @@ class TSHScoreboardWidget(QWidget):
         msgBox = QMessageBox()
         msgBox.setWindowIcon(QIcon('assets/icons/icon.png'))
         msgBox.setWindowTitle(QApplication.translate(
-            "thumb_app", "TSH - Thumbnail"))
+            "thumb_app", "TSH_legacy_00318"))
         try:
             thumbnailPath = thumbnail.generate(
                 settingsManager=SettingsManager, scoreboardNumber=self.scoreboardNumber)
             msgBox.setText(QApplication.translate(
-                "thumb_app", "The thumbnail has been generated here:") + " " + thumbnailPath + "\n\n" + QApplication.translate(
-                "thumb_app", "The video title and description have also been generated."))
+                "thumb_app", "TSH_legacy_00319") + " " + thumbnailPath + "\n\n" + QApplication.translate(
+                "thumb_app", "TSH_legacy_00320"))
             msgBox.setIcon(QMessageBox.NoIcon)
             # msgBox.setInformativeText(thumbnailPath)
 
@@ -555,7 +555,7 @@ class TSHScoreboardWidget(QWidget):
             else:
                 return(thumbnailPath)
         except Exception as e:
-            msgBox.setText(QApplication.translate("app", "Warning"))
+            msgBox.setText(QApplication.translate("app", "TSH_legacy_00153"))
             msgBox.setInformativeText(str(e))
             msgBox.setIcon(QMessageBox.Warning)
             msgBox.exec()
@@ -566,16 +566,16 @@ class TSHScoreboardWidget(QWidget):
             msgBox = QMessageBox()
             msgBox.setWindowIcon(QIcon('assets/icons/icon.png'))
             msgBox.setWindowTitle(QApplication.translate(
-                "app", "TSH - Bluesky"))
+                "app", "TSH_legacy_00227"))
 
             try:
                 post_to_bsky(scoreboardNumber=self.scoreboardNumber, image_path=thumbnailPath.replace(".png", ".jpg"))
                 username = SettingsManager.Get("bsky_account", {}).get("username")
-                msgBox.setText(QApplication.translate("app", "The post has successfully been sent to account {0}").format(username))
+                msgBox.setText(QApplication.translate("app", "TSH_legacy_00228_{0}").format(username))
                 msgBox.setIcon(QMessageBox.NoIcon)
                 msgBox.exec()
             except Exception as e:
-                msgBox.setText(QApplication.translate("app", "Warning"))
+                msgBox.setText(QApplication.translate("app", "TSH_legacy_00153"))
                 msgBox.setInformativeText(str(e))
                 msgBox.setIcon(QMessageBox.Warning)
                 msgBox.exec()
@@ -591,13 +591,13 @@ class TSHScoreboardWidget(QWidget):
     def UpdateBottomButtons(self):
         if TSHTournamentDataProvider.instance.provider and TSHTournamentDataProvider.instance.provider.url:
             self.btSelectSet.setText(
-                QApplication.translate("app", "Load set from {0}").format(TSHTournamentDataProvider.instance.provider.url))
+                QApplication.translate("app", "TSH_legacy_00229_{0}").format(TSHTournamentDataProvider.instance.provider.url))
             self.btSelectSet.setEnabled(True)
             if self.scoreboardNumber <= 1:
                 self.btLoadPlayerSet.setEnabled(True)
         else:
             self.btSelectSet.setText(
-                QApplication.translate("app", "Load set"))
+                QApplication.translate("app", "TSH_legacy_00224"))
             self.btSelectSet.setEnabled(False)
 
     def SetCharacterNumber(self, value):
@@ -905,11 +905,11 @@ class TSHScoreboardWidget(QWidget):
             provider = TSHTournamentDataProvider.instance.provider.name
         if provider and SettingsManager.Get(provider+"_user"):
             self.btLoadPlayerSet.setText(
-                QApplication.translate("app", "Load user set ({0})").format(SettingsManager.Get(provider+'_user')))
+                QApplication.translate("app", "TSH_legacy_00230_{0}").format(SettingsManager.Get(provider+'_user')))
             self.btLoadPlayerSet.setEnabled(True)
         else:
             self.btLoadPlayerSet.setText(
-                QApplication.translate("app", "Load user set"))
+                QApplication.translate("app", "TSH_legacy_00231"))
             self.btLoadPlayerSet.setEnabled(False)
 
     def LoadUserSetClicked(self):

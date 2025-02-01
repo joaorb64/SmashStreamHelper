@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string>TSH_legacy_00025</string>
   </property>
   <property name="locale">
    <locale language="English" country="UnitedStates"/>
@@ -42,7 +42,7 @@
             </font>
            </property>
            <property name="text">
-            <string>General Settings</string>
+            <string>TSH_legacy_00061</string>
            </property>
           </widget>
          </item>
@@ -56,7 +56,7 @@
             </font>
            </property>
            <property name="text">
-            <string>Template</string>
+            <string>TSH_legacy_00062</string>
            </property>
           </widget>
          </item>
@@ -83,7 +83,7 @@
                 </font>
                </property>
                <property name="text">
-                <string>Custom Icon</string>
+                <string>TSH_legacy_00063</string>
                </property>
               </widget>
              </item>
@@ -98,7 +98,7 @@
                   </sizepolicy>
                  </property>
                  <property name="text">
-                  <string>Main</string>
+                  <string>TSH_legacy_00064</string>
                  </property>
                 </widget>
                </item>
@@ -151,7 +151,7 @@
                <item>
                 <widget class="QPushButton" name="customTopLeftIcon">
                  <property name="text">
-                  <string>Left</string>
+                  <string>TSH_legacy_00065</string>
                  </property>
                 </widget>
                </item>
@@ -182,7 +182,7 @@
                <item>
                 <widget class="QPushButton" name="customTopRightIcon">
                  <property name="text">
-                  <string>Right</string>
+                  <string>TSH_legacy_00066</string>
                  </property>
                 </widget>
                </item>
@@ -232,7 +232,7 @@
                 <locale language="English" country="UnitedStates"/>
                </property>
                <property name="text">
-                <string>Image</string>
+                <string>TSH_legacy_00067</string>
                </property>
               </widget>
              </item>
@@ -241,7 +241,7 @@
                <item>
                 <widget class="QPushButton" name="customForeground">
                  <property name="text">
-                  <string>Foreground</string>
+                  <string>TSH_legacy_00068</string>
                  </property>
                 </widget>
                </item>
@@ -276,7 +276,7 @@
                <item>
                 <widget class="QPushButton" name="customBackground">
                  <property name="text">
-                  <string>Background</string>
+                  <string>TSH_legacy_00069</string>
                  </property>
                 </widget>
                </item>
@@ -343,7 +343,7 @@
                 </font>
                </property>
                <property name="text">
-                <string>Separators</string>
+                <string>TSH_legacy_00070</string>
                </property>
               </widget>
              </item>
@@ -363,7 +363,7 @@
                 </font>
                </property>
                <property name="text">
-                <string>Width</string>
+                <string>TSH_legacy_00071</string>
                </property>
               </widget>
              </item>
@@ -386,7 +386,7 @@
                 </font>
                </property>
                <property name="text">
-                <string>Color</string>
+                <string>TSH_legacy_00072</string>
                </property>
               </widget>
              </item>
@@ -446,14 +446,14 @@
                 </font>
                </property>
                <property name="text">
-                <string>Display</string>
+                <string>TSH_legacy_00073</string>
                </property>
               </widget>
              </item>
              <item>
               <widget class="QCheckBox" name="phaseNameCheck">
                <property name="text">
-                <string>Phase name?</string>
+                <string>TSH_legacy_00074</string>
                </property>
                <property name="checked">
                 <bool>true</bool>
@@ -463,7 +463,7 @@
              <item>
               <widget class="QCheckBox" name="teamNameCheck">
                <property name="text">
-                <string>Teams names?</string>
+                <string>TSH_legacy_00075</string>
                </property>
                <property name="checked">
                 <bool>false</bool>
@@ -473,7 +473,7 @@
              <item>
               <widget class="QCheckBox" name="sponsorCheck">
                <property name="text">
-                <string>Sponsors?</string>
+                <string>TSH_legacy_00076</string>
                </property>
                <property name="checked">
                 <bool>true</bool>
@@ -501,7 +501,7 @@
             </font>
            </property>
            <property name="text">
-            <string>Tag font</string>
+            <string>TSH_legacy_00077</string>
            </property>
           </widget>
          </item>
@@ -522,7 +522,7 @@
                 </font>
                </property>
                <property name="text">
-                <string>Fonts</string>
+                <string>TSH_legacy_00078</string>
                </property>
               </widget>
              </item>
@@ -546,7 +546,7 @@
                 </font>
                </property>
                <property name="text">
-                <string>Font Type</string>
+                <string>TSH_legacy_00079</string>
                </property>
               </widget>
              </item>
@@ -571,7 +571,7 @@
                 </font>
                </property>
                <property name="text">
-                <string>Font Color</string>
+                <string>TSH_legacy_00080</string>
                </property>
               </widget>
              </item>
@@ -596,7 +596,7 @@
                 </font>
                </property>
                <property name="text">
-                <string>Font Outline</string>
+                <string>TSH_legacy_00081</string>
                </property>
               </widget>
              </item>
@@ -645,7 +645,7 @@
                 </font>
                </property>
                <property name="text">
-                <string>Sponsor Font Color</string>
+                <string>TSH_legacy_00082</string>
                </property>
               </widget>
              </item>
@@ -681,7 +681,7 @@
             </font>
            </property>
            <property name="text">
-            <string>Phase font</string>
+            <string>TSH_legacy_00083</string>
            </property>
           </widget>
          </item>
@@ -702,7 +702,7 @@
                 </font>
                </property>
                <property name="text">
-                <string>Fonts</string>
+                <string>TSH_legacy_00078</string>
                </property>
               </widget>
              </item>
@@ -726,7 +726,7 @@
                 </font>
                </property>
                <property name="text">
-                <string>Font Type</string>
+                <string>TSH_legacy_00079</string>
                </property>
               </widget>
              </item>
@@ -751,7 +751,7 @@
                 </font>
                </property>
                <property name="text">
-                <string>Font Color</string>
+                <string>TSH_legacy_00080</string>
                </property>
               </widget>
              </item>
@@ -776,7 +776,7 @@
                 </font>
                </property>
                <property name="text">
-                <string>Font Outline</string>
+                <string>TSH_legacy_00081</string>
                </property>
               </widget>
              </item>
@@ -831,7 +831,7 @@
             </font>
            </property>
            <property name="text">
-            <string>Game Settings</string>
+            <string>TSH_legacy_00084</string>
            </property>
           </widget>
          </item>
@@ -844,7 +844,7 @@
             </font>
            </property>
            <property name="text">
-            <string>(No game selected)</string>
+            <string>TSH_legacy_00085</string>
            </property>
           </widget>
          </item>
@@ -858,7 +858,7 @@
             </font>
            </property>
            <property name="text">
-            <string>Asset Pack</string>
+            <string>TSH_legacy_00086</string>
            </property>
           </widget>
          </item>
@@ -879,14 +879,14 @@
          <item>
           <widget class="QCheckBox" name="smoothScaling">
            <property name="text">
-            <string>Smooth scaling</string>
+            <string>TSH_legacy_00087</string>
            </property>
           </widget>
          </item>
          <item>
           <widget class="QCheckBox" name="flipP1Check">
            <property name="text">
-            <string>Flip P1 assets?</string>
+            <string>TSH_legacy_00088</string>
            </property>
            <property name="checked">
             <bool>false</bool>
@@ -896,7 +896,7 @@
          <item>
           <widget class="QCheckBox" name="flipP2Check">
            <property name="text">
-            <string>Flip P2 assets?</string>
+            <string>TSH_legacy_00089</string>
            </property>
            <property name="checked">
             <bool>false</bool>
@@ -921,7 +921,7 @@
               </font>
              </property>
              <property name="text">
-              <string>Zoom</string>
+              <string>TSH_legacy_00090</string>
              </property>
              <property name="alignment">
               <set>Qt::AlignLeading</set>
@@ -957,21 +957,21 @@
            <item>
             <widget class="QCheckBox" name="proportionalScaling">
              <property name="text">
-              <string>Proportional character scaling</string>
+              <string>TSH_legacy_00092</string>
              </property>
             </widget>
            </item>
            <item>
             <widget class="QCheckBox" name="scaleToFillX">
              <property name="text">
-              <string>Scale to fit X</string>
+              <string>TSH_legacy_00093</string>
              </property>
             </widget>
            </item>
            <item>
             <widget class="QCheckBox" name="scaleToFillY">
              <property name="text">
-              <string>Scale to fit Y</string>
+              <string>TSH_legacy_00094</string>
              </property>
             </widget>
            </item>
@@ -991,7 +991,7 @@
                 </font>
                </property>
                <property name="text">
-                <string>Horizontal Align</string>
+                <string>TSH_legacy_00095</string>
                </property>
               </widget>
              </item>
@@ -1022,7 +1022,7 @@
                 </font>
                </property>
                <property name="text">
-                <string>Vertical Align</string>
+                <string>TSH_legacy_00096</string>
                </property>
               </widget>
              </item>
@@ -1046,14 +1046,14 @@
          <item>
           <widget class="QCheckBox" name="flipSeparators">
            <property name="text">
-            <string>Invert separator orientation</string>
+            <string>TSH_legacy_00097</string>
            </property>
           </widget>
          </item>
          <item>
           <widget class="QCheckBox" name="hideSeparators">
            <property name="text">
-            <string>Hide separators between characters</string>
+            <string>TSH_legacy_00098</string>
            </property>
           </widget>
          </item>
@@ -1065,7 +1065,7 @@
               <item>
                <widget class="QLabel" name="label_20">
                 <property name="text">
-                 <string>Distance</string>
+                 <string>TSH_legacy_00099</string>
                 </property>
                </widget>
               </item>
@@ -1086,7 +1086,7 @@
               <item>
                <widget class="QLabel" name="label_21">
                 <property name="text">
-                 <string>Angle</string>
+                 <string>TSH_legacy_00100</string>
                 </property>
                </widget>
               </item>
@@ -1115,7 +1115,7 @@
          <item>
           <widget class="QPushButton" name="resetToDefault">
            <property name="text">
-            <string>Reset to Defaults</string>
+            <string>TSH_legacy_00102</string>
            </property>
           </widget>
          </item>
@@ -1136,7 +1136,7 @@
         </font>
        </property>
        <property name="text">
-        <string>Preview</string>
+        <string>TSH_legacy_00103</string>
        </property>
       </widget>
      </item>
@@ -1154,21 +1154,21 @@
      <item>
       <widget class="QPushButton" name="btUpdatePreview">
        <property name="text">
-        <string>Update Preview</string>
+        <string>TSH_legacy_00104</string>
        </property>
       </widget>
      </item>
      <item>
       <widget class="QPushButton" name="btGenerate">
        <property name="text">
-        <string>Generate Thumbnail</string>
+        <string>TSH_legacy_00105</string>
        </property>
       </widget>
      </item>
      <item>
       <widget class="QCheckBox" name="openExplorerCheck">
        <property name="text">
-        <string>Open File Explorer after generation?</string>
+        <string>TSH_legacy_00106</string>
        </property>
        <property name="checked">
         <bool>false</bool>

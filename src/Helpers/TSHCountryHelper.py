@@ -186,7 +186,7 @@ class TSHCountryHelper(QObject):
             if AdditionalFlags:
                 separator = QStandardItem()
                 separator.setData("    " + QApplication.translate("app",
-                                  "Custom Flags").upper() + "    ", Qt.ItemDataRole.EditRole)
+                                  "TSH_legacy_00277").upper() + "    ", Qt.ItemDataRole.EditRole)
                 separator.setEnabled(False)
                 separator.setSelectable(False)
                 TSHCountryHelper.countryModel.appendRow(separator)

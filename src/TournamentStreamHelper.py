@@ -129,9 +129,9 @@ from src.TSHWebServer import WebServer
 
 def generate_restart_messagebox(main_txt):
     messagebox = QMessageBox()
-    messagebox.setWindowTitle(QApplication.translate("app", "Warning"))
+    messagebox.setWindowTitle(QApplication.translate("app", "TSH_legacy_00153"))
     messagebox.setText(
-        main_txt + "\n" + QApplication.translate("app", "The program will now close."))
+        main_txt + "\n" + QApplication.translate("app", "TSH_legacy_00154"))
     messagebox.finished.connect(QApplication.exit)
     return (messagebox)
 
@@ -151,10 +151,10 @@ def UpdateProcedure():
 
         messagebox = generate_restart_messagebox(
             QApplication.translate(
-                "app", "Update download complete. The program will extract the update upon closing.")
+                "app", "TSH_legacy_00205")
             + "\n\n"
             + QApplication.translate(
-                "app", "Please ensure the layout folder or its contents aren't open in another application before closing this window.")
+                "app", "TSH_legacy_00206")
             + "\n"
         )
 
@@ -165,14 +165,14 @@ def UpdateProcedure():
 
         buttonReply = QDialog()
         buttonReply.setWindowTitle(
-            QApplication.translate("app", "Warning"))
+            QApplication.translate("app", "TSH_legacy_00153"))
         vbox = QVBoxLayout()
         buttonReply.setLayout(vbox)
 
         buttonReply.layout().addWidget(
             QLabel(QApplication.translate(
                 "updater",
-                "Error while backing up the layout folder:")
+                "TSH_legacy_00324")
             )
         )
         buttonReply.layout().addWidget(QLabel(str(e)))
@@ -181,10 +181,10 @@ def UpdateProcedure():
         vbox.addLayout(hbox)
 
         btRetry = QPushButton(
-            QApplication.translate("updater", "Retry"))
+            QApplication.translate("updater", "TSH_legacy_00325"))
         hbox.addWidget(btRetry)
         btCancel = QPushButton(
-            QApplication.translate("updater", "Cancel"))
+            QApplication.translate("updater", "TSH_legacy_00326"))
         hbox.addWidget(btCancel)
 
         btRetry.clicked.connect(lambda: [
@@ -320,7 +320,7 @@ class Window(QMainWindow):
 
         thumbnailSetting = TSHThumbnailSettingsWidget()
         thumbnailSetting.setObjectName(
-            QApplication.translate("app", "Thumbnail Settings"))
+            QApplication.translate("app", "TSH_legacy_00155"))
         self.addDockWidget(
             Qt.DockWidgetArea.BottomDockWidgetArea, thumbnailSetting)
         self.dockWidgets.append(thumbnailSetting)
@@ -328,7 +328,7 @@ class Window(QMainWindow):
         bracket = TSHBracketWidget()
         bracket.setWindowIcon(QIcon('assets/icons/info.svg'))
         bracket.setObjectName(
-            QApplication.translate("app", "Bracket"))
+            QApplication.translate("app", "TSH_legacy_00156"))
         self.addDockWidget(
             Qt.DockWidgetArea.BottomDockWidgetArea, bracket)
         self.dockWidgets.append(bracket)
@@ -336,7 +336,7 @@ class Window(QMainWindow):
         tournamentInfo = TSHTournamentInfoWidget()
         tournamentInfo.setWindowIcon(QIcon('assets/icons/info.svg'))
         tournamentInfo.setObjectName(
-            QApplication.translate("app", "Tournament Info"))
+            QApplication.translate("app", "TSH_legacy_00157"))
         self.addDockWidget(
             Qt.DockWidgetArea.BottomDockWidgetArea, tournamentInfo)
         self.dockWidgets.append(tournamentInfo)
@@ -344,16 +344,16 @@ class Window(QMainWindow):
         self.scoreboard = TSHScoreboardManager.instance
         self.scoreboard.setWindowIcon(QIcon('assets/icons/list.svg'))
         self.scoreboard.setObjectName(
-            QApplication.translate("app", "Scoreboard Manager"))
+            QApplication.translate("app", "TSH_legacy_00158"))
         self.addDockWidget(
             Qt.DockWidgetArea.BottomDockWidgetArea, self.scoreboard)
         self.dockWidgets.append(self.scoreboard)
         TSHScoreboardManager.instance.setWindowTitle(
-            QApplication.translate("app", "Scoreboard Manager"))
+            QApplication.translate("app", "TSH_legacy_00158"))
 
         self.stageWidget = TSHScoreboardStageWidget()
         self.stageWidget.setObjectName(
-            QApplication.translate("app", "Stage"))
+            QApplication.translate("app", "TSH_legacy_00160"))
         self.addDockWidget(
             Qt.DockWidgetArea.BottomDockWidgetArea, self.stageWidget)
         self.dockWidgets.append(self.stageWidget)
@@ -365,13 +365,13 @@ class Window(QMainWindow):
 
         commentary = TSHCommentaryWidget()
         commentary.setWindowIcon(QIcon('assets/icons/mic.svg'))
-        commentary.setObjectName(QApplication.translate("app", "Commentary"))
+        commentary.setObjectName(QApplication.translate("app", "TSH_legacy_00161"))
         self.addDockWidget(Qt.DockWidgetArea.BottomDockWidgetArea, commentary)
         self.dockWidgets.append(commentary)
 
         playerList = TSHPlayerListWidget()
         playerList.setWindowIcon(QIcon('assets/icons/list.svg'))
-        playerList.setObjectName(QApplication.translate("app", "Player List"))
+        playerList.setObjectName(QApplication.translate("app", "TSH_legacy_00138"))
         self.addDockWidget(Qt.DockWidgetArea.BottomDockWidgetArea, playerList)
         self.dockWidgets.append(playerList)
 
@@ -397,7 +397,7 @@ class Window(QMainWindow):
         group_box.layout().addLayout(hbox)
 
         self.setTournamentBt = QPushButton(
-            QApplication.translate("app", "Set tournament"))
+            QApplication.translate("app", "TSH_legacy_00162"))
         hbox.addWidget(self.setTournamentBt)
         self.setTournamentBt.clicked.connect(
             lambda bt=None, s=self: TSHTournamentDataProvider.instance.SetStartggEventSlug(s))
@@ -416,7 +416,7 @@ class Window(QMainWindow):
         group_box.layout().addLayout(hbox)
 
         self.btLoadPlayerSet = QPushButton(
-            QApplication.translate("app", "Load tournament and sets from StartGG user"))
+            QApplication.translate("app", "TSH_legacy_00163"))
         self.btLoadPlayerSet.setIcon(QIcon("./assets/icons/startgg.svg"))
         self.btLoadPlayerSet.clicked.connect(self.LoadUserSetClicked)
         self.btLoadPlayerSet.setIcon(QIcon("./assets/icons/startgg.svg"))
@@ -453,29 +453,29 @@ class Window(QMainWindow):
         menu = QMenu()
         self.optionsBt.setMenu(menu)
         action = menu.addAction(
-            QApplication.translate("app", "Always on top"))
+            QApplication.translate("app", "TSH_legacy_00164"))
         action.setCheckable(True)
         action.toggled.connect(self.ToggleAlwaysOnTop)
         action = self.optionsBt.menu().addAction(
-            QApplication.translate("app", "Check for updates"))
+            QApplication.translate("app", "TSH_legacy_00165"))
         self.updateAction = action
         action.setIcon(QIcon('assets/icons/undo.svg'))
         action.triggered.connect(self.CheckForUpdates)
         action = self.optionsBt.menu().addAction(
-            QApplication.translate("app", "Download assets"))
+            QApplication.translate("app", "TSH_legacy_00166"))
         action.setIcon(QIcon('assets/icons/download.svg'))
         action.triggered.connect(TSHAssetDownloader.instance.DownloadAssets)
         self.downloadAssetsAction = action
 
         action = self.optionsBt.menu().addAction(
-            QApplication.translate("app", "Light mode"))
+            QApplication.translate("app", "TSH_legacy_00167"))
         action.setCheckable(True)
         self.LoadTheme()
         action.setChecked(SettingsManager.Get("light_mode", False))
         action.toggled.connect(self.ToggleLightMode)
 
         toggleWidgets = QMenu(QApplication.translate(
-            "app", "Toggle widgets") + menu_margin, self.optionsBt.menu())
+            "app", "TSH_legacy_00168") + menu_margin, self.optionsBt.menu())
         self.optionsBt.menu().addMenu(toggleWidgets)
         toggleWidgets.addAction(self.scoreboard.toggleViewAction())
         toggleWidgets.addAction(self.stageWidget.toggleViewAction())
@@ -488,23 +488,23 @@ class Window(QMainWindow):
         self.optionsBt.menu().addSeparator()
 
         action = self.optionsBt.menu().addAction(
-            QApplication.translate("app", "Migrate Layout"))
+            QApplication.translate("app", "TSH_legacy_00169"))
         action.triggered.connect(self.MigrateWindow)
 
         self.optionsBt.menu().addSeparator()
 
         languageSelect = QMenu(QApplication.translate(
-            "app", "Program Language") + menu_margin, self.optionsBt.menu())
+            "app", "TSH_legacy_00170") + menu_margin, self.optionsBt.menu())
         self.optionsBt.menu().addMenu(languageSelect)
 
         languageSelectGroup = QActionGroup(languageSelect)
         languageSelectGroup.setExclusive(True)
 
         program_language_messagebox = generate_restart_messagebox(
-            QApplication.translate("app", "Program language changed successfully."))
+            QApplication.translate("app", "TSH_legacy_00171"))
 
         action = languageSelect.addAction(
-            QApplication.translate("app", "System language"))
+            QApplication.translate("app", "TSH_legacy_00172"))
         languageSelectGroup.addAction(action)
         action.setCheckable(True)
         action.setChecked(True)
@@ -525,17 +525,17 @@ class Window(QMainWindow):
                 action.setChecked(True)
 
         languageSelect = QMenu(QApplication.translate(
-            "app", "Game Asset Language") + menu_margin, self.optionsBt.menu())
+            "app", "TSH_legacy_00173") + menu_margin, self.optionsBt.menu())
         self.optionsBt.menu().addMenu(languageSelect)
 
         languageSelectGroup = QActionGroup(languageSelect)
         languageSelectGroup.setExclusive(True)
 
         game_asset_language_messagebox = generate_restart_messagebox(
-            QApplication.translate("app", "Game Asset Language changed successfully."))
+            QApplication.translate("app", "TSH_legacy_00174"))
 
         action = languageSelect.addAction(
-            QApplication.translate("app", "Same as program language"))
+            QApplication.translate("app", "TSH_legacy_00175"))
         languageSelectGroup.addAction(action)
         action.setCheckable(True)
         action.setChecked(True)
@@ -556,17 +556,17 @@ class Window(QMainWindow):
                 action.setChecked(True)
 
         languageSelect = QMenu(QApplication.translate(
-            "app", "Tournament term language") + menu_margin, self.optionsBt.menu())
+            "app", "TSH_legacy_00176") + menu_margin, self.optionsBt.menu())
         self.optionsBt.menu().addMenu(languageSelect)
 
         languageSelectGroup = QActionGroup(languageSelect)
         languageSelectGroup.setExclusive(True)
 
         fg_language_messagebox = generate_restart_messagebox(
-            QApplication.translate("app", "Tournament term language changed successfully."))
+            QApplication.translate("app", "TSH_legacy_00177"))
 
         action = languageSelect.addAction(
-            QApplication.translate("app", "Same as program language"))
+            QApplication.translate("app", "TSH_legacy_00175"))
         languageSelectGroup.addAction(action)
         action.setCheckable(True)
         action.setChecked(True)
@@ -591,15 +591,15 @@ class Window(QMainWindow):
         # Help menu code
         help_messagebox = QMessageBox()
         help_messagebox.setWindowTitle(
-            QApplication.translate("app", "Warning"))
+            QApplication.translate("app", "TSH_legacy_00153"))
         help_messagebox.setText(QApplication.translate(
-            "app", "A new window has been opened in your default webbrowser."))
+            "app", "TSH_legacy_00178"))
 
         helpMenu = QMenu(QApplication.translate(
-            "app", "Help") + menu_margin, self.optionsBt.menu())
+            "app", "TSH_legacy_00179") + menu_margin, self.optionsBt.menu())
         self.optionsBt.menu().addMenu(helpMenu)
         action = helpMenu.addAction(
-            QApplication.translate("app", "Open the Wiki"))
+            QApplication.translate("app", "TSH_legacy_00180"))
         wiki_url = "https://github.com/joaorb64/TournamentStreamHelper/wiki"
         action.triggered.connect(lambda x=None: [
             QDesktopServices.openUrl(QUrl(wiki_url)),
@@ -607,7 +607,7 @@ class Window(QMainWindow):
         ])
 
         action = helpMenu.addAction(
-            QApplication.translate("app", "Look for Help on the forum"))
+            QApplication.translate("app", "TSH_legacy_00181"))
         help_url = "https://github.com/joaorb64/TournamentStreamHelper/discussions/categories/q-a"
         action.triggered.connect(lambda x=None: [
             QDesktopServices.openUrl(QUrl(help_url)),
@@ -615,7 +615,7 @@ class Window(QMainWindow):
         ])
 
         action = helpMenu.addAction(
-            QApplication.translate("app", "Report a bug"))
+            QApplication.translate("app", "TSH_legacy_00182"))
         issues_url = "https://github.com/joaorb64/TournamentStreamHelper/issues"
         action.triggered.connect(lambda x=None: [
             QDesktopServices.openUrl(QUrl(issues_url)),
@@ -623,7 +623,7 @@ class Window(QMainWindow):
         ])
 
         action = helpMenu.addAction(
-            QApplication.translate("app", "Ask for Help on Discord"))
+            QApplication.translate("app", "TSH_legacy_00183"))
         discord_url = "https://discord.gg/X9Sp2FkcHF"
         action.triggered.connect(lambda x=None: [
             QDesktopServices.openUrl(QUrl(discord_url)),
@@ -633,7 +633,7 @@ class Window(QMainWindow):
         helpMenu.addSeparator()
 
         action = helpMenu.addAction(
-            QApplication.translate("app", "Contribute to the Asset Database"))
+            QApplication.translate("app", "TSH_legacy_00184"))
         asset_url = "https://github.com/joaorb64/StreamHelperAssets/"
         action.triggered.connect(lambda x=None: [
             QDesktopServices.openUrl(QUrl(asset_url)),
@@ -643,13 +643,13 @@ class Window(QMainWindow):
         self.settingsWindow = TSHSettingsWindow(self)
 
         action = self.optionsBt.menu().addAction(
-            QApplication.translate("Settings", "Settings"))
+            QApplication.translate("Settings", "TSH_legacy_00129"))
         action.setIcon(QIcon('assets/icons/settings.svg'))
         action.triggered.connect(lambda: self.settingsWindow.show())
 
         self.aboutWidget = TSHAboutWidget()
         action = self.optionsBt.menu().addAction(
-            QApplication.translate("About", "About"))
+            QApplication.translate("About", "TSH_legacy_00000"))
         action.setIcon(QIcon('assets/icons/info.svg'))
         action.triggered.connect(lambda: self.aboutWidget.show())
 
@@ -701,12 +701,12 @@ class Window(QMainWindow):
 
         label_margin = " "*18
         label = QLabel(
-            label_margin + QApplication.translate("app", "Number of Scoreboards"))
+            label_margin + QApplication.translate("app", "TSH_legacy_00185"))
         label.setSizePolicy(QSizePolicy.Policy.Fixed,
                             QSizePolicy.Policy.Minimum)
 
         self.btLoadModifyTabName = QPushButton(
-            QApplication.translate("app", "Modify Tab Name"))
+            QApplication.translate("app", "TSH_legacy_00186"))
         self.btLoadModifyTabName.setSizePolicy(
             QSizePolicy.Policy.Fixed, QSizePolicy.Policy.Minimum)
         self.btLoadModifyTabName.clicked.connect(self.ChangeTab)
@@ -759,11 +759,11 @@ class Window(QMainWindow):
     def UpdateUserSetButton(self):
         if SettingsManager.Get("StartGG_user"):
             self.btLoadPlayerSet.setText(
-                QApplication.translate("app", "Load tournament and sets from StartGG user")+" "+QApplication.translate("punctuation", "(")+f"{SettingsManager.Get('StartGG_user')}"+QApplication.translate("punctuation", ")"))
+                QApplication.translate("app", "TSH_legacy_00163")+" "+QApplication.translate("punctuation", "(")+f"{SettingsManager.Get('StartGG_user')}"+QApplication.translate("punctuation", ")"))
             self.btLoadPlayerSet.setEnabled(True)
         else:
             self.btLoadPlayerSet.setText(
-                QApplication.translate("app", "Load tournament and sets from StartGG user"))
+                QApplication.translate("app", "TSH_legacy_00163"))
             self.btLoadPlayerSet.setEnabled(False)
 
     def LoadUserSetClicked(self):
@@ -850,9 +850,9 @@ class Window(QMainWindow):
             if silent == False:
                 messagebox = QMessageBox()
                 messagebox.setWindowTitle(
-                    QApplication.translate("app", "Warning"))
+                    QApplication.translate("app", "TSH_legacy_00153"))
                 messagebox.setText(
-                    QApplication.translate("app", "Failed to fetch version from github:")+"\n"+str(e))
+                    QApplication.translate("app", "TSH_legacy_00187")+"\n"+str(e))
                 messagebox.exec()
 
         try:
@@ -869,25 +869,25 @@ class Window(QMainWindow):
                 if myVersion < currVersion:
                     buttonReply = QDialog(self)
                     buttonReply.setWindowTitle(
-                        QApplication.translate("app", "Updater"))
+                        QApplication.translate("app", "TSH_legacy_00188"))
                     buttonReply.setWindowModality(Qt.WindowModal)
                     vbox = QVBoxLayout()
                     buttonReply.setLayout(vbox)
 
                     buttonReply.layout().addWidget(
-                        QLabel(QApplication.translate("app", "New version available:")+" "+myVersion+" → "+currVersion))
+                        QLabel(QApplication.translate("app", "TSH_legacy_00189")+" "+myVersion+" → "+currVersion))
                     buttonReply.layout().addWidget(QLabel(release["body"]))
                     buttonReply.layout().addWidget(QLabel(
-                        QApplication.translate("app", "Update to latest version?")+"\n"+QApplication.translate("app", "NOTE: WILL BACKUP /layout/ AND OVERWRITE DATA IN ALL OTHER DIRECTORIES")))
+                        QApplication.translate("app", "TSH_legacy_00190")+"\n"+QApplication.translate("app", "TSH_legacy_00191")))
 
                     hbox = QHBoxLayout()
                     vbox.addLayout(hbox)
 
                     btUpdate = QPushButton(
-                        QApplication.translate("app", "Update"))
+                        QApplication.translate("app", "TSH_legacy_00148"))
                     hbox.addWidget(btUpdate)
                     btCancel = QPushButton(
-                        QApplication.translate("app", "Cancel"))
+                        QApplication.translate("app", "TSH_legacy_00203"))
                     hbox.addWidget(btCancel)
 
                     buttonReply.show()
@@ -897,7 +897,7 @@ class Window(QMainWindow):
                         db.removeAllApplicationFonts()
                         QFontDatabase.removeAllApplicationFonts()
                         self.downloadDialogue = QProgressDialog(
-                            QApplication.translate("app", "Downloading update..."), QApplication.translate("app", "Cancel"), 0, 0, self)
+                            QApplication.translate("app", "TSH_legacy_00204"), QApplication.translate("app", "TSH_legacy_00203"), 0, 0, self)
                         self.downloadDialogue.setWindowModality(
                             Qt.WindowModality.WindowModal)
                         self.downloadDialogue.show()
@@ -934,7 +934,7 @@ class Window(QMainWindow):
 
                         def progress(downloaded):
                             self.downloadDialogue.setLabelText(
-                                QApplication.translate("app", "Downloading update...")+" "+str(downloaded/1024/1024)+" MB")
+                                QApplication.translate("app", "TSH_legacy_00204")+" "+str(downloaded/1024/1024)+" MB")
 
                         def finished():
                             self.downloadDialogue.close()
@@ -952,9 +952,9 @@ class Window(QMainWindow):
                 else:
                     messagebox = QMessageBox()
                     messagebox.setWindowTitle(
-                        QApplication.translate("app", "Info"))
+                        QApplication.translate("app", "TSH_legacy_00207"))
                     messagebox.setText(
-                        QApplication.translate("app", "You're already using the latest version"))
+                        QApplication.translate("app", "TSH_legacy_00208"))
                     messagebox.exec()
             else:
                 if myVersion < currVersion:
@@ -967,7 +967,7 @@ class Window(QMainWindow):
                     p.end()
                     self.optionsBt.setIcon(QIcon(baseIcon))
                     self.updateAction.setText(
-                        QApplication.translate("app", "Check for updates") + " " + QApplication.translate("punctuation", "[") + QApplication.translate("app", "Update available!") + QApplication.translate("punctuation", "]"))
+                        QApplication.translate("app", "TSH_legacy_00165") + " " + QApplication.translate("punctuation", "[") + QApplication.translate("app", "TSH_legacy_00209") + QApplication.translate("punctuation", "]"))
 
     # Checks for asset updates after game assets are loaded
     # If updates are available, edit QAction icon
@@ -1019,12 +1019,12 @@ class Window(QMainWindow):
     def ChangeTab(self):
         tabNameWindow = QDialog(self)
         tabNameWindow.setWindowTitle(
-            QApplication.translate("app", "Change Tab Title"))
+            QApplication.translate("app", "TSH_legacy_00192"))
         tabNameWindow.setMinimumWidth(400)
         vbox = QVBoxLayout()
         tabNameWindow.setLayout(vbox)
         hbox = QHBoxLayout()
-        label = QLabel(QApplication.translate("app", "Scoreboard Number"))
+        label = QLabel(QApplication.translate("app", "TSH_legacy_00193"))
         number = QSpinBox()
         number.setMinimum(1)
         number.setMaximum(TSHScoreboardManager.instance.GetTabAmount())
@@ -1035,7 +1035,7 @@ class Window(QMainWindow):
         vbox.addWidget(name)
 
         setSelection = QPushButton(
-            text=QApplication.translate("app", "Set Tab Title"))
+            text=QApplication.translate("app", "TSH_legacy_00194"))
 
         def UpdateTabName():
             TSHScoreboardManager.instance.SetTabName(
@@ -1051,29 +1051,29 @@ class Window(QMainWindow):
     def MigrateWindow(self):
         migrateWindow = QDialog(self)
         migrateWindow.setWindowTitle(
-            QApplication.translate("app", "Migrate Scoreboard Layout"))
+            QApplication.translate("app", "TSH_legacy_00195"))
         migrateWindow.setMinimumWidth(800)
         vbox = QVBoxLayout()
         migrateWindow.setLayout(vbox)
         hbox = QHBoxLayout()
-        label = QLabel(QApplication.translate("app", "File Path"))
+        label = QLabel(QApplication.translate("app", "TSH_legacy_00196"))
         filePath = QLineEdit()
         fileExplorer = QPushButton(
-            text=QApplication.translate("app", "Find File..."))
+            text=QApplication.translate("app", "TSH_legacy_00197"))
         hbox.addWidget(label)
         hbox.addWidget(filePath)
         hbox.addWidget(fileExplorer)
         vbox.addLayout(hbox)
 
         migrate = QPushButton(
-            text=QApplication.translate("app", "Migrate Layout"))
+            text=QApplication.translate("app", "TSH_legacy_00169"))
 
         def open_dialog():
             fname, _ok = QFileDialog.getOpenFileName(
                 migrateWindow,
-                QApplication.translate("app", "Open Layout Javascript File"),
+                QApplication.translate("app", "TSH_legacy_00198"),
                 os.getcwd(),
-                QApplication.translate("app", "Javascript File") + "  (*.js)",
+                QApplication.translate("app", "TSH_legacy_00199") + "  (*.js)",
             )
             if fname:
                 filePath.setText(str(fname))
@@ -1103,15 +1103,15 @@ class Window(QMainWindow):
 
             completeDialog = QDialog(migrateWindow)
             completeDialog.setWindowTitle(
-                QApplication.translate("app", "Migration Complete"))
+                QApplication.translate("app", "TSH_legacy_00200"))
             completeDialog.setMinimumWidth(500)
             vbox2 = QVBoxLayout()
             completeDialog.setLayout(vbox2)
             completeText = QLabel(QApplication.translate(
-                "app", "Layout Migration has completed!"))
+                "app", "TSH_legacy_00201"))
             completeText.setAlignment(Qt.AlignmentFlag.AlignCenter)
             closeButton = QPushButton(
-                text=QApplication.translate("app", "Close Window"))
+                text=QApplication.translate("app", "TSH_legacy_00202"))
             vbox2.addWidget(completeText)
             vbox2.addWidget(closeButton)
             closeButton.clicked.connect(completeDialog.close)

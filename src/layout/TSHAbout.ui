@@ -20,7 +20,7 @@
    </size>
   </property>
   <property name="windowTitle">
-   <string>About</string>
+   <string>TSH_legacy_00000</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_2">
    <item>
@@ -61,7 +61,7 @@
        <item>
         <widget class="QLabel" name="label_3">
          <property name="text">
-          <string>Contributors:</string>
+          <string>TSH_legacy_00001</string>
          </property>
         </widget>
        </item>

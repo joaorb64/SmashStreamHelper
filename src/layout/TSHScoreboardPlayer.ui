@@ -22,7 +22,7 @@
    </font>
   </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string>TSH_legacy_00025</string>
   </property>
   <property name="locale">
    <locale language="English" country="UnitedStates"/>
@@ -37,7 +37,7 @@
       </font>
      </property>
      <property name="title">
-      <string>CHARACTERS</string>
+      <string>TSH_legacy_00055</string>
      </property>
      <layout class="QVBoxLayout" name="verticalLayout"/>
     </widget>
@@ -53,7 +53,7 @@
         </font>
        </property>
        <property name="text">
-        <string>PLAYER</string>
+        <string>TSH_legacy_00060</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -71,7 +71,7 @@
       </font>
      </property>
      <property name="text">
-      <string>SPONSOR/TAG</string>
+      <string>TSH_legacy_00051</string>
      </property>
     </widget>
    </item>
@@ -97,7 +97,7 @@
         <enum>QComboBox::AdjustToMinimumContentsLengthWithIcon</enum>
        </property>
        <property name="placeholderText">
-        <string>Region</string>
+        <string>TSH_legacy_00049</string>
        </property>
       </widget>
      </item>
@@ -121,7 +121,7 @@
         <enum>QComboBox::AdjustToMinimumContentsLengthWithIcon</enum>
        </property>
        <property name="placeholderText">
-        <string>Country</string>
+        <string>TSH_legacy_00050</string>
        </property>
       </widget>
      </item>
@@ -137,7 +137,7 @@
         </font>
        </property>
        <property name="placeholderText">
-        <string>Handle Only</string>
+        <string>TSH_legacy_00053</string>
        </property>
       </widget>
      </item>
@@ -164,7 +164,7 @@
       </font>
      </property>
      <property name="text">
-      <string>LOCATION</string>
+      <string>TSH_legacy_00054</string>
      </property>
     </widget>
    </item>
@@ -176,7 +176,7 @@
       </font>
      </property>
      <property name="placeholderText">
-      <string>Real Name</string>
+      <string>TSH_legacy_00048</string>
      </property>
     </widget>
    </item>
@@ -199,7 +199,7 @@
         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
        </property>
        <property name="placeholderText">
-        <string>Sponsor</string>
+        <string>TSH_legacy_00057</string>
        </property>
       </widget>
      </item>
@@ -211,7 +211,7 @@
         </font>
        </property>
        <property name="placeholderText">
-        <string>GamerTag</string>
+        <string>TSH_legacy_00058</string>
        </property>
       </widget>
      </item>
@@ -226,7 +226,7 @@
       </font>
      </property>
      <property name="text">
-      <string>REAL NAME</string>
+      <string>TSH_legacy_00056</string>
      </property>
     </widget>
    </item>
@@ -241,7 +241,7 @@
         </font>
        </property>
        <property name="text">
-        <string>TWITTER</string>
+        <string>TSH_legacy_00052</string>
        </property>
       </widget>
      </item>
@@ -254,7 +254,7 @@
         </font>
        </property>
        <property name="text">
-        <string>PRONOUNS</string>
+        <string>TSH_legacy_00059</string>
        </property>
       </widget>
      </item>

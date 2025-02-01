@@ -67,7 +67,7 @@ class TSHScoreboardPlayerWidget(QGroupBox):
         self.layout().addLayout(bottom_buttons_layout, 99, 0, 1, 3)
 
         self.save_bt = QPushButton(
-            QApplication.translate("app", "Save new player"))
+            QApplication.translate("app", "TSH_legacy_00210"))
         self.save_bt.setFont(QFont(self.save_bt.font().family(), 9))
         # self.save_bt.setFont(self.parent.font_small)
         self.save_bt.setIcon(QIcon('assets/icons/save.svg'))
@@ -80,7 +80,7 @@ class TSHScoreboardPlayerWidget(QGroupBox):
         self.save_bt.setMinimumWidth(1)
 
         self.delete_bt = QPushButton(
-            QApplication.translate("app", "Delete player entry"))
+            QApplication.translate("app", "TSH_legacy_00211"))
         # self.delete_bt.setFont(self.parent.font_small)
         self.delete_bt.setIcon(QIcon('assets/icons/cancel.svg'))
         bottom_buttons_layout.addWidget(self.delete_bt)
@@ -93,7 +93,7 @@ class TSHScoreboardPlayerWidget(QGroupBox):
         self.delete_bt.clicked.connect(self.DeletePlayerFromDB)
         self.delete_bt.setMinimumWidth(1)
 
-        self.clear_bt = QPushButton(QApplication.translate("app", "Clear"))
+        self.clear_bt = QPushButton(QApplication.translate("app", "TSH_legacy_00212"))
         self.clear_bt.setFont(QFont(self.clear_bt.font().family(), 9))
         # self.clear_bt.setFont(self.parent.font_small)
         self.clear_bt.setIcon(QIcon('assets/icons/undo.svg'))
@@ -347,7 +347,7 @@ class TSHScoreboardPlayerWidget(QGroupBox):
     def SetIndex(self, index: int, team: int):
         if self.customName == "":
             self.findChild(QWidget, "title").setText(
-                QApplication.translate("app", "Player {0}").format(index))
+                QApplication.translate("app", "TSH_legacy_00213_{0}").format(index))
         else:
             title = self.customName + " {0}"
             self.findChild(QWidget, "title").setText(
@@ -787,10 +787,10 @@ class TSHScoreboardPlayerWidget(QGroupBox):
 
         if tag in TSHPlayerDB.database:
             self.save_bt.setText(
-                QApplication.translate("app", "Update player"))
+                QApplication.translate("app", "TSH_legacy_00214"))
         else:
             self.save_bt.setText(
-                QApplication.translate("app", "Save new player"))
+                QApplication.translate("app", "TSH_legacy_00210"))
 
     def ManageDeletePlayerFromDBActive(self):
         tag = self.GetCurrentPlayerTag()

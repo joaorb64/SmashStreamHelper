@@ -70,7 +70,7 @@ class TSHBracketWidget(QDockWidget):
 
         self.slotNumber = QSpinBox()
         self.slotNumber.setMinimum(2)
-        col.layout().addWidget(QLabel(QApplication.translate("app", "Number of slots")))
+        col.layout().addWidget(QLabel(QApplication.translate("app", "TSH_legacy_00139")))
         col.layout().addWidget(self.slotNumber)
         self.slotNumber.valueChanged.connect(lambda val: [
             self.playerList.SetSlotNumber(val),
@@ -81,7 +81,7 @@ class TSHBracketWidget(QDockWidget):
         col = QWidget()
         col.setLayout(QVBoxLayout())
         self.playerPerTeam = QSpinBox()
-        col.layout().addWidget(QLabel(QApplication.translate("app", "Players per slot")))
+        col.layout().addWidget(QLabel(QApplication.translate("app", "TSH_legacy_00140")))
         col.layout().addWidget(self.playerPerTeam)
         self.playerPerTeam.valueChanged.connect(
             lambda val: self.playerList.SetPlayersPerTeam(val))
@@ -90,7 +90,7 @@ class TSHBracketWidget(QDockWidget):
         col = QWidget()
         col.setLayout(QVBoxLayout())
         self.charNumber = QSpinBox()
-        col.layout().addWidget(QLabel(QApplication.translate("app", "Characters per player")))
+        col.layout().addWidget(QLabel(QApplication.translate("app", "TSH_legacy_00141")))
         col.layout().addWidget(self.charNumber)
         self.charNumber.valueChanged.connect(
             self.playerList.SetCharactersPerPlayer)

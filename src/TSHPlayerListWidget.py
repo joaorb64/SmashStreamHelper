@@ -31,7 +31,7 @@ class TSHPlayerListWidget(QDockWidget):
 
         self.playerList = TSHPlayerList(base=base)
 
-        self.setWindowTitle(QApplication.translate("app", "Player List"))
+        self.setWindowTitle(QApplication.translate("app", "TSH_legacy_00138"))
         self.setFloating(True)
         self.setAllowedAreas(Qt.DockWidgetArea.AllDockWidgetAreas)
         self.widget = QWidget()
@@ -54,7 +54,7 @@ class TSHPlayerListWidget(QDockWidget):
         col = QWidget()
         col.setLayout(QVBoxLayout())
         self.slotNumber = QSpinBox()
-        col.layout().addWidget(QLabel(QApplication.translate("app", "Number of slots")))
+        col.layout().addWidget(QLabel(QApplication.translate("app", "TSH_legacy_00139")))
         col.layout().addWidget(self.slotNumber)
         self.slotNumber.valueChanged.connect(
             lambda val: self.playerList.SetSlotNumber(val))
@@ -63,7 +63,7 @@ class TSHPlayerListWidget(QDockWidget):
         col = QWidget()
         col.setLayout(QVBoxLayout())
         self.playerPerTeam = QSpinBox()
-        col.layout().addWidget(QLabel(QApplication.translate("app", "Players per slot")))
+        col.layout().addWidget(QLabel(QApplication.translate("app", "TSH_legacy_00140")))
         col.layout().addWidget(self.playerPerTeam)
         self.playerPerTeam.valueChanged.connect(
             self.playerList.SetPlayersPerTeam)
@@ -72,7 +72,7 @@ class TSHPlayerListWidget(QDockWidget):
         col = QWidget()
         col.setLayout(QVBoxLayout())
         self.charNumber = QSpinBox()
-        col.layout().addWidget(QLabel(QApplication.translate("app", "Characters per player")))
+        col.layout().addWidget(QLabel(QApplication.translate("app", "TSH_legacy_00141")))
         col.layout().addWidget(self.charNumber)
         self.charNumber.valueChanged.connect(
             self.playerList.SetCharactersPerPlayer)
@@ -83,12 +83,12 @@ class TSHPlayerListWidget(QDockWidget):
         topOptions.layout().addWidget(row)
 
         self.loadFromStandingsBt = QPushButton(
-            QApplication.translate("app", "Load tournament standings"))
+            QApplication.translate("app", "TSH_legacy_00142"))
         self.loadFromStandingsBt.clicked.connect(self.LoadFromStandingsClicked)
         row.layout().addWidget(self.loadFromStandingsBt)
 
         self.generateAltTextButton = QPushButton(
-            QApplication.translate("app", "Generate Descriptive Text for Results"))
+            QApplication.translate("app", "TSH_legacy_00143"))
         self.generateAltTextButton = add_alt_text_tooltip_to_button(self.generateAltTextButton)
         self.generateAltTextButton.clicked.connect(self.AltTextWindow)
         row.layout().addWidget(self.generateAltTextButton)
@@ -117,7 +117,7 @@ class TSHPlayerListWidget(QDockWidget):
 
         messagebox = QDialog()
         messagebox.setWindowTitle(QApplication.translate(
-            "app", "Descriptive Text for Results"))
+            "app", "TSH_legacy_00144"))
         vbox = QVBoxLayout()
         messagebox.setLayout(vbox)
         textbox = QTextEdit()
@@ -130,7 +130,7 @@ class TSHPlayerListWidget(QDockWidget):
         vbox.layout().addLayout(hbox)
 
         copyTextButton = QPushButton(
-            QApplication.translate("app", "Copy text"))
+            QApplication.translate("app", "TSH_legacy_00145"))
         copyTextButton.clicked.connect(copy_text)
         hbox.layout().addWidget(copyTextButton)
 

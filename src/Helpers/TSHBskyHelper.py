@@ -14,7 +14,7 @@ def post_to_bsky(scoreboardNumber=1, image_path=None):
     locale = TSHLocaleHelper.programLocale
     bsky_account = SettingsManager.Get("bsky_account", {})
     if not bsky_account or not bsky_account.get("username") or not bsky_account.get("host") or not bsky_account.get("app_password"):
-        raise ValueError(QApplication.translate("app", "Bluesky account not correctly set"))
+        raise ValueError(QApplication.translate("app", "TSH_legacy_00282"))
     client = Client(bsky_account.get("host", "https://bsky.social"))
     client.login(bsky_account["username"].lstrip("@"), bsky_account["app_password"])
 

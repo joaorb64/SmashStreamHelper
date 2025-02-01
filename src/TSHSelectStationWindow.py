@@ -12,7 +12,7 @@ class TSHSelectStationWindow(QDialog):
         super().__init__(parent)
 
         self.setWindowTitle(
-            QApplication.translate("app", "Select a station"))
+            QApplication.translate("app", "TSH_legacy_00278"))
         self.setWindowModality(Qt.WindowModal)
 
         layout = QVBoxLayout()
@@ -80,10 +80,10 @@ class TSHSelectStationWindow(QDialog):
         logger.info("Got stations" + str(len(stations)))
         model = QStandardItemModel()
         horizontal_labels = ["Type", "Id", "Stream", "Identifier"]
-        horizontal_labels[0] = QApplication.translate("app", "Type")
-        horizontal_labels[1] = QApplication.translate("app", "Id")
-        horizontal_labels[2] = QApplication.translate("app", "Stream")
-        horizontal_labels[3] = QApplication.translate("app", "Identifier")
+        horizontal_labels[0] = QApplication.translate("app", "TSH_legacy_00279")
+        horizontal_labels[1] = QApplication.translate("app", "TSH_legacy_00280")
+        horizontal_labels[2] = QApplication.translate("app", "TSH_legacy_00257")
+        horizontal_labels[3] = QApplication.translate("app", "TSH_legacy_00281")
         model.setHorizontalHeaderLabels(horizontal_labels)
 
         if stations is not None:

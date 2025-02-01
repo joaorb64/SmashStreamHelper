@@ -75,7 +75,7 @@ class TSHAssetDownloader(QObject):
 
         self.preDownloadDialogue = QDialog()
         self.preDownloadDialogue.setWindowTitle(
-            QApplication.translate("app", "Download assets"))
+            QApplication.translate("app", "TSH_legacy_00166"))
         self.preDownloadDialogue.setWindowModality(
             Qt.WindowModality.ApplicationModal)
         self.preDownloadDialogue.setLayout(QVBoxLayout())
@@ -167,17 +167,17 @@ class TSHAssetDownloader(QObject):
                 "Credits"
             ]
 
-            header_labels[2] = QApplication.translate("app", "State")
+            header_labels[2] = QApplication.translate("app", "TSH_legacy_00239")
             header_labels[3] = QApplication.translate(
-                "app", "Asset pack name")
+                "app", "TSH_legacy_00240")
             header_labels[4] = QApplication.translate(
-                "app", "Installed version")
-            header_labels[5] = QApplication.translate("app", "Latest version")
-            header_labels[6] = QApplication.translate("app", "Size")
-            header_labels[7] = QApplication.translate("app", "Stage data")
-            header_labels[8] = QApplication.translate("app", "Eyesight data")
-            header_labels[9] = QApplication.translate("app", "Description")
-            header_labels[10] = QApplication.translate("app", "Credits")
+                "app", "TSH_legacy_00241")
+            header_labels[5] = QApplication.translate("app", "TSH_legacy_00242")
+            header_labels[6] = QApplication.translate("app", "TSH_legacy_00243")
+            header_labels[7] = QApplication.translate("app", "TSH_legacy_00244")
+            header_labels[8] = QApplication.translate("app", "TSH_legacy_00245")
+            header_labels[9] = QApplication.translate("app", "TSH_legacy_00246")
+            header_labels[10] = QApplication.translate("app", "TSH_legacy_00247")
 
             model.setHorizontalHeaderLabels(header_labels)
             downloadList.hideColumn(0)
@@ -276,10 +276,10 @@ class TSHAssetDownloader(QObject):
         TSHGameAssetManager.instance.signals.onLoadAssets.connect(
             ReloadGameAssets)
 
-        btOk = QPushButton(QApplication.translate("app", "Download"))
+        btOk = QPushButton(QApplication.translate("app", "TSH_legacy_00248"))
         self.preDownloadDialogue.layout().addWidget(btOk)
 
-        btUpdateAll = QPushButton(QApplication.translate("app", "Update all"))
+        btUpdateAll = QPushButton(QApplication.translate("app", "TSH_legacy_00249"))
         self.preDownloadDialogue.layout().addWidget(btUpdateAll)
 
         btUpdateAll.clicked.connect(TSHAssetDownloader.UpdateAllAssets)
@@ -302,8 +302,8 @@ class TSHAssetDownloader(QObject):
                 filesToDownload[f]["extractpath"] = "./user_data/games/"+game
 
             self.downloadDialogue = QProgressDialog(
-                QApplication.translate("app", "Downloading assets"),
-                QApplication.translate("app", "Cancel"),
+                QApplication.translate("app", "TSH_legacy_00250"),
+                QApplication.translate("app", "TSH_legacy_00203"),
                 0,
                 100
             )
@@ -328,7 +328,7 @@ class TSHAssetDownloader(QObject):
         except Exception as e:
             messagebox = QMessageBox()
             messagebox.setText(QApplication.translate(
-                "app", "Failed to fetch assets from github:")+"\n"+str(e))
+                "app", "TSH_legacy_00251")+"\n"+str(e))
             messagebox.exec()
         return assets
 
@@ -377,7 +377,7 @@ class TSHAssetDownloader(QObject):
                 with open("user_data/games/"+f["name"], 'wb') as downloadFile:
                     logger.info("Downloading "+f["name"])
                     progress_callback.emit(QApplication.translate(
-                        "app", "Downloading {0}... ({1}/{2})").format(f["name"], i+1, len(files)))
+                        "app", "TSH_legacy_00252_{0}_{1}_{2}").format(f["name"], i+1, len(files)))
 
                     response = urllib.request.urlopen(f["path"])
 
@@ -464,8 +464,8 @@ class TSHAssetDownloader(QObject):
                     allFilesToDownload.append(filesToDownload)
 
             TSHAssetDownloader.instance.downloadDialogue = QProgressDialog(
-                QApplication.translate("app", "Downloading assets"),
-                QApplication.translate("app", "Cancel"),
+                QApplication.translate("app", "TSH_legacy_00250"),
+                QApplication.translate("app", "TSH_legacy_00203"),
                 0,
                 100
             )

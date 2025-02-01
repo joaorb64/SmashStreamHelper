@@ -10,7 +10,7 @@ class TSHSettingsWindow(QDialog):
         super().__init__(parent=parent)
 
     def UiMounted(self):
-        self.setWindowTitle(QApplication.translate("Settings", "Settings"))
+        self.setWindowTitle(QApplication.translate("Settings", "TSH_legacy_00129"))
 
         # Create a list widget for the selection
         self.selection_list = QListWidget()
@@ -40,7 +40,7 @@ class TSHSettingsWindow(QDialog):
 
         generalSettings.append((
             QApplication.translate(
-                "settings.general", "Enable profanity filter"),
+                "settings.general", "TSH_legacy_00301"),
             "profanity_filter",
             "checkbox",
             True
@@ -48,7 +48,7 @@ class TSHSettingsWindow(QDialog):
 
         generalSettings.append((
             QApplication.translate(
-                "settings.control_score_from_stage_strike", "Enable score control from the stage striking app"),
+                "settings.control_score_from_stage_strike", "TSH_legacy_00297"),
             "control_score_from_stage_strike",
             "checkbox",
             True
@@ -56,7 +56,7 @@ class TSHSettingsWindow(QDialog):
 
         generalSettings.append((
             QApplication.translate(
-                "settings.disable_autoupdate", "Disable automatic set updating for the scoreboard"),
+                "settings.disable_autoupdate", "TSH_legacy_00298"),
             "disable_autoupdate",
             "checkbox",
             False
@@ -64,7 +64,7 @@ class TSHSettingsWindow(QDialog):
 
         generalSettings.append((
             QApplication.translate(
-                "settings.disable_export", "Disable TSH file exporting"),
+                "settings.disable_export", "TSH_legacy_00299"),
             "disable_export",
             "checkbox",
             False
@@ -72,33 +72,33 @@ class TSHSettingsWindow(QDialog):
         
         generalSettings.append((
             QApplication.translate(
-                "settings.disable_overwrite", "Do not override existing values in local_players.csv (takes effect on next restart)"),
+                "settings.disable_overwrite", "TSH_legacy_00300"),
             "disable_overwrite",
             "checkbox",
             False
         ))
 
         self.add_setting_widget(QApplication.translate(
-            "settings", "General"), SettingsWidget("general", generalSettings))
+            "settings", "TSH_legacy_00287"), SettingsWidget("general", generalSettings))
 
         # Add hotkey settings
         hotkeySettings = []
 
         hotkeySettings.append((
-            QApplication.translate("settings.hotkeys", "Enable hotkeys"),
+            QApplication.translate("settings.hotkeys", "TSH_legacy_00317"),
             "hotkeys_enabled",
             "checkbox",
             True
         ))
 
         key_names = {
-            "load_set": QApplication.translate("settings.hotkeys", "Load set"),
-            "team1_score_up": QApplication.translate("settings.hotkeys", "Team 1 score up"),
-            "team1_score_down": QApplication.translate("settings.hotkeys", "Team 1 score down"),
-            "team2_score_up": QApplication.translate("settings.hotkeys", "Team 2 score up"),
-            "team2_score_down": QApplication.translate("settings.hotkeys", "Team 2 score down"),
-            "reset_scores": QApplication.translate("settings.hotkeys", "Reset scores"),
-            "swap_teams": QApplication.translate("settings.hotkeys", "Swap teams"),
+            "load_set": QApplication.translate("settings.hotkeys", "TSH_legacy_00310"),
+            "team1_score_up": QApplication.translate("settings.hotkeys", "TSH_legacy_00311"),
+            "team1_score_down": QApplication.translate("settings.hotkeys", "TSH_legacy_00312"),
+            "team2_score_up": QApplication.translate("settings.hotkeys", "TSH_legacy_00313"),
+            "team2_score_down": QApplication.translate("settings.hotkeys", "TSH_legacy_00314"),
+            "reset_scores": QApplication.translate("settings.hotkeys", "TSH_legacy_00315"),
+            "swap_teams": QApplication.translate("settings.hotkeys", "TSH_legacy_00316"),
         }
 
         for i, (setting, value) in enumerate(TSHHotkeys.instance.keys.items()):
@@ -111,41 +111,41 @@ class TSHSettingsWindow(QDialog):
             ))
 
         self.add_setting_widget(QApplication.translate(
-            "settings", "Hotkeys"), SettingsWidget("hotkeys", hotkeySettings))
+            "settings", "TSH_legacy_00288"), SettingsWidget("hotkeys", hotkeySettings))
             
         # Add Bluesky settings
         bskySettings = []
         bskySettings.append((
             QApplication.translate(
-                "settings.bsky", "Host server"),
+                "settings.bsky", "TSH_legacy_00291"),
             "host",
             "textbox",
             "https://bsky.social"
         ))
         bskySettings.append((
             QApplication.translate(
-                "settings.bsky", "Bluesky Handle"),
+                "settings.bsky", "TSH_legacy_00292"),
             "username",
             "textbox",
             ""
         ))
         bskySettings.append((
             QApplication.translate(
-                "settings.bsky", "Application Password"),
+                "settings.bsky", "TSH_legacy_00293"),
             "app_password",
             "password",
             "",
             None,
             QApplication.translate(
-                "settings.bsky", "You can get an app password by going into your Bluesky settings -> Privacy & Security") + "\n" +
+                "settings.bsky", "TSH_legacy_00294") + "\n" +
                 QApplication.translate(
-                "settings.bsky", "Please note that said app password will be stored in plain text on your computer") + "\n\n" +
+                "settings.bsky", "TSH_legacy_00295") + "\n\n" +
                 QApplication.translate(
-                "settings.bsky", "Do not use your regular account password!").upper()
+                "settings.bsky", "TSH_legacy_00296").upper()
         ))
         
         self.add_setting_widget(QApplication.translate(
-            "settings", "Bluesky"), SettingsWidget("bsky_account", bskySettings))
+            "settings", "TSH_legacy_00289"), SettingsWidget("bsky_account", bskySettings))
 
         self.resize(1000, 500)
         QApplication.processEvents()

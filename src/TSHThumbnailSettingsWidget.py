@@ -75,7 +75,7 @@ class TSHThumbnailSettingsWidget(QDockWidget):
         self.lock = Lock()
 
         self.setWindowTitle(QApplication.translate(
-            "app", "Thumbnail Settings"))
+            "app", "TSH_legacy_00155"))
         self.setFloating(True)
         self.setAllowedAreas(Qt.DockWidgetArea.AllDockWidgetAreas)
         self.widget = QWidget()
@@ -839,10 +839,10 @@ class TSHThumbnailSettingsWidget(QDockWidget):
         logger.info(f'set type font {cbFont.currentData()}')
         types = ["Regular", "Bold", "Italic", "Bold Italic"]
         types_localised = ["Regular", "Bold", "Italic", "Bold Italic"]
-        types_localised[0] = QApplication.translate("app", "Regular")
-        types_localised[1] = QApplication.translate("app", "Bold")
-        types_localised[2] = QApplication.translate("app", "Italic")
-        types_localised[3] = QApplication.translate("app", "Bold Italic")
+        types_localised[0] = QApplication.translate("app", "TSH_legacy_00233")
+        types_localised[1] = QApplication.translate("app", "TSH_legacy_00234")
+        types_localised[2] = QApplication.translate("app", "TSH_legacy_00235")
+        types_localised[3] = QApplication.translate("app", "TSH_legacy_00236")
 
         cbType.clear()
 
@@ -927,8 +927,8 @@ class TSHThumbnailSettingsWidget(QDockWidget):
         msgBox = QMessageBox()
         msgBox.setWindowIcon(QIcon('assets/icons/icon.png'))
         msgBox.setWindowTitle(QApplication.translate(
-            "thumb_app", "TSH - Thumbnail"))
-        msgBox.setText(QApplication.translate("app", "Warning"))
+            "thumb_app", "TSH_legacy_00318"))
+        msgBox.setText(QApplication.translate("app", "TSH_legacy_00153"))
         msgBox.setInformativeText(str(e))
         msgBox.setIcon(QMessageBox.Warning)
         msgBox.exec()

@@ -56,7 +56,7 @@ class TSHScoreboardManager(QDockWidget):
                 self.scoreboardholder.append(scoreboardObj)
                 scoreboard.layout().addWidget(scoreboardObj)
                 self.tabs.addTab(scoreboard, QApplication.translate(
-                    "app", "Scoreboard") + " " + str(amount))
+                    "app", "TSH_legacy_00159") + " " + str(amount))
             else:
                 logger.info(
                     "Scoreboard Manager - Removing Scoreboard " + str(amount+1))
@@ -85,7 +85,7 @@ class TSHScoreboardManager(QDockWidget):
                 self.tabs.setTabText(int(index)-1, name)
             else:
                 self.tabs.setTabText(int(index)-1,
-                                     QApplication.translate("app", "Scoreboard") + " " + str(index))
+                                     QApplication.translate("app", "TSH_legacy_00159") + " " + str(index))
         else:
             logger.error(f"Invalid Scoreboard ID provided: {index}")
             logger.error(

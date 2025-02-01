@@ -8,7 +8,7 @@ from atproto import client_utils
 
 def add_alt_text_tooltip_to_button(push_button: QPushButton):
     altTextTooltip = QApplication.translate(
-            "tips", "Descriptive text (also known as Alt text) describes images for blind and low-vision users, and helps give context around images to everyone. As such, we highly recommend adding it to your image uploads on your websites and social media posts.")
+            "tips", "TSH_legacy_00323")
     push_button.setToolTip('\n'.join(textwrap.wrap(altTextTooltip, 40)))
     return(push_button)
 
@@ -23,9 +23,9 @@ def load_program_state():
 def generate_bsky_text(scoreboard_id=1, use_phase_name=True):
     def transform_yt_into_bsky(description, data):
         text = "\n".join(description.split("\n")[:-1]).strip("\n")
-        text = "🔴 " + QApplication.translate("altText", "LIVE NOW") + "\n\n" + text
+        text = "🔴 " + QApplication.translate("altText", "TSH_legacy_00130") + "\n\n" + text
 
-        link_text = QApplication.translate("altText", "Click here to watch")
+        link_text = QApplication.translate("altText", "TSH_legacy_00131")
         link_url = data.get("score").get(str(scoreboard_id)).get("stream_url")
         if link_url:
             text += "\n\n"
@@ -61,7 +61,7 @@ def generate_youtube(scoreboard_id=1, use_phase_name=True, use_characters=True):
     team_data = match_data.get("team")
     title_long = f"[{tournament_name.upper()}] - "
     title_short = f"[{tournament_name.upper()}] - "
-    game_localisation = QApplication.translate("altText", "Game:")
+    game_localisation = QApplication.translate("altText", "TSH_legacy_00132")
     description = f"""
 {tournament_name.upper()}
 {event_name} - {event_date}
@@ -119,11 +119,11 @@ def generate_youtube(scoreboard_id=1, use_phase_name=True, use_characters=True):
 
         if team_id == "1":
             title_long = f'{title_long} ' + \
-                QApplication.translate("altText", "VS") + ' '
+                QApplication.translate("altText", "TSH_legacy_00133") + ' '
             title_short = f'{title_short} ' + \
-                QApplication.translate("altText", "VS") + ' '
+                QApplication.translate("altText", "TSH_legacy_00133") + ' '
             description = f'{description} ' + \
-                QApplication.translate("altText", "VS") + ' '
+                QApplication.translate("altText", "TSH_legacy_00133") + ' '
 
     description = f"{description}\n\n"
     commentator_data = data.get("commentary")
@@ -135,9 +135,9 @@ def generate_youtube(scoreboard_id=1, use_phase_name=True, use_characters=True):
                 current_commentator_data.get("mergedName"))
     if commentator_names:
         description = description + QApplication.translate(
-            "altText", "Commentators:") + " " + " / ".join(commentator_names) + "\n"
+            "altText", "TSH_legacy_00134") + " " + " / ".join(commentator_names) + "\n"
 
-    description = description + QApplication.translate("altText", "Stream powered by TournamentStreamHelper:") + \
+    description = description + QApplication.translate("altText", "TSH_legacy_00135") + \
         " " + "https://github.com/joaorb64/TournamentStreamHelper/releases"
     description = description.strip()
 
@@ -185,8 +185,8 @@ def generate_top_n_alt_text(bracket_type="DOUBLE_ELIMINATION"):
     event_name = data.get("tournamentInfo").get("eventName")
     event_date = data.get("tournamentInfo").get("startAt")
     game_name = data.get("game").get("name")
-    game_localisation = QApplication.translate("altText", "Game:")
-    standings_localisation = QApplication.translate("altText", "Standings:")
+    game_localisation = QApplication.translate("altText", "TSH_legacy_00132")
+    standings_localisation = QApplication.translate("altText", "TSH_legacy_00136")
     alt_text = f"""
 {tournament_name.upper()}
 {event_name} - {event_date}
@@ -242,11 +242,11 @@ def generate_top_n_alt_text(bracket_type="DOUBLE_ELIMINATION"):
                 current_commentator_data.get("mergedName"))
     if commentator_names:
         alt_text = alt_text + QApplication.translate(
-            "altText", "Commentators:") + " " + " / ".join(commentator_names) + "\n"
+            "altText", "TSH_legacy_00134") + " " + " / ".join(commentator_names) + "\n"
 
     alt_text = alt_text + \
         QApplication.translate(
-            "altText", "Stream powered by TournamentStreamHelper")
+            "altText", "TSH_legacy_00137")
 
     alt_text.strip()
     return (alt_text)
