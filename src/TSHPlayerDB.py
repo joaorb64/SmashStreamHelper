@@ -142,10 +142,12 @@ class TSHPlayerDB:
                                 if playerMains is not None and len(playerMains) > 0:
                                     # Must be a list of size 2 [character, skin]
                                     playerMains = [main for main in playerMains if isinstance(
-                                        main, list) and len(main) == 2]
+                                        main, list) and (len(main) == 2) or (len(main) == 3)]
 
                                     # If the skin is invalid, default to 0
                                     for main in playerMains:
+                                        while len(main) < 3:
+                                            main.append("")
                                         skin = 0
                                         try:
                                             skin = int(main[1])
@@ -154,6 +156,14 @@ class TSHPlayerDB:
                                                 f'Local DB error: Player {player.get("gamerTag")} has an invalid skin for character {main[0]}')
                                             logger.error(traceback.format_exc())
                                         main[1] = skin
+
+                                        # If no variant, set to none
+                                        if len(main) >=3:
+                                            variant = main[2]
+                                        else:
+                                            variant = ""
+                                        main[2] = variant
+                                        
 
                                     if playerMains[0][0] in TSHGameAssetManager.instance.characters.keys():
                                         character = playerMains[0]

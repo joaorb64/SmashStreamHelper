@@ -949,7 +949,7 @@ class TSHThumbnailSettingsWidget(QDockWidget):
                 if key == "base_files":
                     continue
                 # Skip stage icon assets
-                if isinstance(val.get("type"), list) and "stage_icon" in val.get("type"):
+                if isinstance(val.get("type"), list) and ("stage_icon" in val.get("type") or "variant_icon" in val.get("type")):
                     continue
                 if val.get("name"):
                     self.selectRenderType.addItem(val.get("name"), key)

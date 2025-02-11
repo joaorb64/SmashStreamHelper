@@ -708,35 +708,35 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location filename="../Helpers/TSHAltTextHelper.py" line="65"/>
-        <location filename="../Helpers/TSHAltTextHelper.py" line="189"/>
+        <location filename="../Helpers/TSHAltTextHelper.py" line="200"/>
         <source>Game:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Helpers/TSHAltTextHelper.py" line="122"/>
-        <location filename="../Helpers/TSHAltTextHelper.py" line="124"/>
-        <location filename="../Helpers/TSHAltTextHelper.py" line="126"/>
+        <location filename="../Helpers/TSHAltTextHelper.py" line="133"/>
+        <location filename="../Helpers/TSHAltTextHelper.py" line="135"/>
+        <location filename="../Helpers/TSHAltTextHelper.py" line="137"/>
         <source>VS</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Helpers/TSHAltTextHelper.py" line="138"/>
-        <location filename="../Helpers/TSHAltTextHelper.py" line="245"/>
+        <location filename="../Helpers/TSHAltTextHelper.py" line="149"/>
+        <location filename="../Helpers/TSHAltTextHelper.py" line="269"/>
         <source>Commentators:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Helpers/TSHAltTextHelper.py" line="141"/>
+        <location filename="../Helpers/TSHAltTextHelper.py" line="152"/>
         <source>Stream powered by TournamentStreamHelper:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Helpers/TSHAltTextHelper.py" line="190"/>
+        <location filename="../Helpers/TSHAltTextHelper.py" line="201"/>
         <source>Standings:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Helpers/TSHAltTextHelper.py" line="251"/>
+        <location filename="../Helpers/TSHAltTextHelper.py" line="275"/>
         <source>Stream powered by TournamentStreamHelper</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1188,7 +1188,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location filename="../TSHScoreboardPlayerWidget.py" line="70"/>
-        <location filename="../TSHScoreboardPlayerWidget.py" line="793"/>
+        <location filename="../TSHScoreboardPlayerWidget.py" line="845"/>
         <source>Save new player</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1203,7 +1203,7 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../TSHScoreboardPlayerWidget.py" line="350"/>
+        <location filename="../TSHScoreboardPlayerWidget.py" line="354"/>
         <location filename="../TSHSelectSetWindow.py" line="115"/>
         <location filename="../TSHSelectSetWindow.py" line="117"/>
         <location filename="../thumbnail/main_generate_thumbnail.py" line="1183"/>
@@ -1211,7 +1211,7 @@ p, li { white-space: pre-wrap; }
         <translation>Giocatore {0}</translation>
     </message>
     <message>
-        <location filename="../TSHScoreboardPlayerWidget.py" line="790"/>
+        <location filename="../TSHScoreboardPlayerWidget.py" line="842"/>
         <source>Update player</source>
         <translation>Aggionare il giocatore</translation>
     </message>
