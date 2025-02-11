@@ -53,6 +53,19 @@ class TSHScoreboardPlayerWidget(QGroupBox):
         self.losers = False
 
         uic.loadUi(TSHResolve("src/layout/TSHScoreboardPlayer.ui"), self)
+        
+        custom_textbox_layout = QHBoxLayout()
+        self.custom_textbox = QPlainTextEdit()
+        custom_textbox_layout.addWidget(self.custom_textbox)
+        self.layout().addLayout(custom_textbox_layout, 98, 0, 1, 3)
+        self.custom_textbox.setObjectName("custom_textbox")
+        self.custom_textbox.setPlaceholderText(QApplication.translate("app", "Additional information"))
+        self.custom_textbox.textChanged.connect(
+                lambda element=self.custom_textbox: [
+                    StateManager.Set(
+                        f"{self.path}.{element.objectName()}", element.toPlainText()),
+                    self.instanceSignals.dataChanged.emit()
+                ])
 
         self.character_container = self.findChild(QWidget, "characters")
 
@@ -645,6 +658,13 @@ class TSHScoreboardPlayerWidget(QGroupBox):
                 twitter.setText(
                     f'{data.get("twitter")}')
                 twitter.editingFinished.emit()
+            
+            if data.get("custom_textbox") and data.get("custom_textbox") != self.custom_textbox.toPlainText():
+                data["custom_textbox"] = TSHBadWordFilter.Censor(
+                    data["custom_textbox"], data.get("country_code"))
+                self.custom_textbox.setPlainText(
+                    f'{data.get("custom_textbox")}'.replace("\\n", "\n"))
+                self.custom_textbox.textChanged.emit()
 
             pronoun = self.findChild(QWidget, "pronoun")
             if data.get("pronoun") and data.get("pronoun") != pronoun.text():
@@ -738,7 +758,8 @@ class TSHScoreboardPlayerWidget(QGroupBox):
             "gamerTag": self.findChild(QWidget, "name").text(),
             "name": self.findChild(QWidget, "real_name").text(),
             "twitter": self.findChild(QWidget, "twitter").text(),
-            "pronoun": self.findChild(QWidget, "pronoun").text()
+            "pronoun": self.findChild(QWidget, "pronoun").text(),
+            "custom_textbox": "\\n".join(self.custom_textbox.toPlainText().splitlines())
         }
 
         if TSHGameAssetManager.instance.selectedGame.get("codename"):
@@ -811,6 +832,11 @@ class TSHScoreboardPlayerWidget(QGroupBox):
                 if c.text() != "":
                     c.setText("")
                     c.editingFinished.emit()
+
+            for c in self.findChildren(QPlainTextEdit):
+                if c.toPlainText() != "":
+                    c.clear()
+                    c.textChanged.emit()
 
             for c in self.findChildren(QComboBox):
                 if (no_mains):

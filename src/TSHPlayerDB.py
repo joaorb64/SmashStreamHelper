@@ -22,7 +22,7 @@ class TSHPlayerDB:
     database = {}
     model: QStandardItemModel = None
     fieldnames = ["prefix", "gamerTag", "name", "twitter",
-                  "country_code", "state_code", "mains", "pronoun"]
+                  "country_code", "state_code", "mains", "pronoun", "custom_textbox"] # Please always add the new fields at the end of the list
     modelLock = Lock()
 
     def LoadDB():
@@ -31,6 +31,19 @@ class TSHPlayerDB:
                 with open('./user_data/local_players.csv', 'w', encoding='utf-8') as outfile:
                     spamwriter = csv.writer(outfile)
                     spamwriter.writerow(TSHPlayerDB.fieldnames)
+            
+            # Backwards compatibility
+            with open('./user_data/local_players.csv', 'r', encoding='utf-8') as csvfile:
+                lines = csvfile.readlines()
+                header = lines[0].rstrip().split(",")
+                for field in TSHPlayerDB.fieldnames:
+                    if field not in header:
+                        lines[0] = lines[0].rstrip() + f",{field}"
+                        for i in range(1, len(lines)):
+                            lines[i] = lines[i].rstrip() + ","
+            
+            with open('./user_data/local_players.csv', 'w', encoding='utf-8') as outfile:
+                outfile.write("\n".join(lines))
 
             with open('./user_data/local_players.csv', 'r', encoding='utf-8') as csvfile:
                 reader = csv.DictReader(csvfile, quotechar='\'')
