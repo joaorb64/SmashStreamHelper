@@ -1,0 +1,1 @@
+Custom NZ state flags by sharlot (@stick_twt on Twitter), based off custom AU state icons by Kaiza (@KPKaiza on Twitter)
